@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<script>window.MODO = "vitrine";</script>
 <script src="data.js"></script>
 <style>
 /* Layout: vitrine de oficina — abas de catálogo no topo, grade de produtos, ficha do produto em painel sobreposto, editor e configurações como painéis */
@@ -383,6 +384,7 @@ let db=null, assets=null, sample=null, canEdit=true, offline=false;
 let catalogs=[], products=[], activeCat='all', openId=null;
 const imgSrc = p => p.image || (p.imageId ? '/_blob/'+p.imageId : (p.imageData || ''));
 const STATIC = !!window.CATALOGO;
+const VITRINE = window.MODO === 'vitrine';
 const LS_KEY = 'catalogo3d.custos';
 function bootStatic(){
   canEdit=false; catalogsLoaded=productsLoaded=true;
@@ -390,6 +392,12 @@ function bootStatic(){
   let saved={}; try{ saved=JSON.parse(localStorage.getItem(LS_KEY)||'{}')||{}; }catch(e){}
   S = {...DEFAULTS, ...(CATALOGO.config||{}), ...saved};
   if(catalogs.length===1) activeCat=catalogs[0].id;
+  if(VITRINE){
+    $('sort').innerHTML='<option value="name">Nome A–Z</option><option value="price">Menor preço</option><option value="priceDesc">Maior preço</option>';
+    $('btnSettings').remove();
+  } else {
+    const a=document.createElement('a'); a.className='btn plain'; a.href='./'; a.textContent='Ver vitrine'; $('topActions').prepend(a);
+  }
   render();
 }
 
@@ -421,7 +429,7 @@ function saveSettingsSoon(){ clearTimeout(settingsTimer); settingsTimer=setTimeo
 
 /* ================= lista ================= */
 function render(){
-  $('btnNew').hidden = !canEdit; $('btnSettings').textContent = canEdit||STATIC ? 'Custos e taxas' : 'Ver custos e taxas';
+  $('btnNew').hidden = !canEdit; if($('btnSettings')) $('btnSettings').textContent = canEdit||STATIC ? 'Custos e taxas' : 'Ver custos e taxas';
   renderTabs(); renderGrid();
 }
 function renderTabs(){
@@ -463,7 +471,7 @@ function visibleProducts(){
   if(q) list=list.filter(p=>(p.name+' '+(p.adTitle||'')+' '+(p.description||'')).toLowerCase().includes(q));
   const sort=$('sort').value;
   const pix = p => (pricesFor(p).find(x=>x.ch.key==='pix')||{});
-  list.sort((a,b)=> sort==='cost' ? costOf(a).total-costOf(b).total : sort==='profit' ? (pix(b).profit||0)-(pix(a).profit||0) : sort==='recent' ? (b.createdAt||0)-(a.createdAt||0) : String(a.name).localeCompare(b.name,'pt-BR'));
+  list.sort((a,b)=> sort==='price' ? (pix(a).price||0)-(pix(b).price||0) : sort==='priceDesc' ? (pix(b).price||0)-(pix(a).price||0) : sort==='cost' ? costOf(a).total-costOf(b).total : sort==='profit' ? (pix(b).profit||0)-(pix(a).profit||0) : sort==='recent' ? (b.createdAt||0)-(a.createdAt||0) : String(a.name).localeCompare(b.name,'pt-BR'));
   return list;
 }
 function initials(name){ return String(name||'?').split(/\s+/).filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase(); }
@@ -482,6 +490,12 @@ function renderGrid(){
   }
   g.innerHTML=list.map(p=>{
     const c=costOf(p), pr=pricesFor(p), pix=pr.find(x=>x.ch.key==='pix'), ml=pr.find(x=>x.ch.key==='ml1');
+    if(VITRINE){ const sh=pr.find(x=>x.ch.key==='sh');
+      return '<button class="card" type="button" data-id="'+esc(p.id)+'">'+thumbHtml(p)+
+        '<div class="card-body"><div class="card-name">'+esc(p.name)+'</div>'+
+        (p.colorText?'<div class="card-meta">'+esc(p.colorText)+'</div>':'')+
+        '<div class="card-prices"><div><small>No Pix</small><b>'+(pix&&!pix.bad?BRL(pix.price):'—')+'</b></div><div><small>Mercado Livre</small><b>'+(ml&&!ml.bad?BRL(ml.price):'—')+'</b></div></div>'+
+        '</div></button>'; }
     return '<button class="card" type="button" data-id="'+esc(p.id)+'">'+thumbHtml(p)+
       '<div class="card-body"><div class="card-name">'+esc(p.name)+'</div>'+
       '<div class="card-meta">'+num(p.grams).toLocaleString('pt-BR')+' g · '+fmtH(p.minutes)+(num(p.pieces)>1?' · '+p.pieces+' por mesa':'')+'</div>'+
@@ -501,9 +515,36 @@ function adText(p, key){
   const pr=pricesFor(p).find(x=>x.ch.key===key);
   return (p.adTitle||p.name)+'\n\n'+(p.description||'')+(pr&&!pr.bad?'\n\nValor: '+BRL(pr.price):'');
 }
+function renderDetailVitrine(p, el){
+  const pr=pricesFor(p).filter(o=>!o.bad), cat=catalogs.find(x=>x.id===p.catalogId);
+  const pix=pr.find(o=>o.ch.key==='pix');
+  const dims = p.dims && p.dims.length===3 ? p.dims.map(v=>(Math.round(v)/10).toLocaleString('pt-BR')).join(' × ')+' cm' : '';
+  const label = o => o.ch.key==='pix'?'Venda direta':o.ch.key==='ml1'?'Mercado Livre':o.ch.key==='ml2'?'Mercado Livre parcelado':o.ch.name;
+  const sub = o => o.ch.key==='pix'?'Pix, WhatsApp ou Instagram':o.ch.key==='ml1'?'Anúncio Clássico':o.ch.key==='ml2'?'Parcelado sem juros':o.ch.key==='sh'?'Loja na Shopee':'Loja no TikTok';
+  el.innerHTML =
+  '<div class="sheet-head"><div class="actions">'+(cat?'<span class="tag" style="color:'+catColor(cat.color)+'">'+esc(cat.name)+'</span>':'')+'</div><button class="x" id="dClose" type="button" aria-label="Fechar">×</button></div>'+
+  '<div class="sheet-body">'+
+    '<section class="hero">'+thumbHtml(p)+
+      '<div class="hero-info"><h2 class="prod-name" id="dTitle">'+esc(p.name)+'</h2>'+
+        (pix?'<div><div class="note">A partir de</div><div class="costbig" style="margin:2px 0 0"><small>R$ </small>'+pix.price.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})+'</div><div class="note">na venda direta pelo Pix</div></div>':'')+
+        '<div class="copyblock"><div class="lbl">Descrição</div><div class="txt">'+(p.description?esc(p.description):'<span class="note">Sem descrição.</span>')+'</div></div>'+
+      '</div></section>'+
+    '<section class="panel"><h3>Detalhes</h3><div class="kv">'+
+      '<div><small>Material</small><b>'+esc(p.material||'PLA')+'</b></div>'+
+      '<div><small>Cores</small><b>'+(p.colors&&p.colors.length?p.colors.map(x=>'<span class="sw" style="display:inline-block;background:'+esc(x)+';border:1px solid var(--line);margin-right:3px"></span>').join(''):esc(p.colorText||'—'))+'</b></div>'+
+      (dims?'<div><small>Tamanho</small><b>'+esc(dims)+'</b></div>':'')+
+      '<div><small>Produção</small><b>Sob encomenda</b></div>'+
+    '</div></section>'+
+    '<section class="panel"><h3>Onde comprar</h3><div class="tablewrap"><table class="prices" style="min-width:0"><tbody>'+
+      pr.map(o=>'<tr><td class="chn">'+esc(label(o))+'<small>'+esc(sub(o))+'</small></td><td class="price">'+BRL(o.price)+'</td></tr>').join('')+
+    '</tbody></table></div></section>'+
+  '</div>';
+  $('dClose').onclick=closeDetail;
+}
 function renderDetail(){
   const p=products.find(x=>x.id===openId); const el=$('detail');
   if(!p){ el.innerHTML='<div class="sheet-head"><h2 id="dTitle">Produto removido</h2><button class="x" id="dClose" type="button" aria-label="Fechar">×</button></div>'; $('dClose').onclick=closeDetail; return; }
+  if(VITRINE) return renderDetailVitrine(p, el);
   const c=costOf(p), pr=pricesFor(p), cat=catalogs.find(x=>x.id===p.catalogId);
   const dims = p.dims && p.dims.length===3 ? p.dims.map(v=>Math.round(v)).join(' × ')+' mm' : (p.size||'—');
   el.innerHTML =
