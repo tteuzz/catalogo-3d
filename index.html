@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
 <script>window.MODO = "vitrine";</script>
-<script src="data.js"></script>
+<script src="data.js?v=3"></script>
 <style>
 /* Layout: vitrine de oficina — abas de catálogo no topo, grade de produtos, ficha do produto em painel sobreposto, editor e configurações como painéis */
 :root{
@@ -399,6 +399,24 @@ function bootStatic(){
     const a=document.createElement('a'); a.className='btn plain'; a.href='./'; a.textContent='Ver vitrine'; $('topActions').prepend(a);
   }
   render();
+  loadPrices();
+}
+/* preço de venda da vitrine: vem da planilha precos.csv (id;produto;preco) */
+let PRICES = {};
+async function loadPrices(){
+  try{
+    const t = await fetch('precos.csv?t='+Date.now(), {cache:'no-store'}).then(r=>r.ok?r.text():'');
+    t.split(/\r?\n/).slice(1).forEach(line=>{
+      const parts=line.split(';'); if(parts.length<3) return;
+      const v=parseFloat(parts[parts.length-1].trim().replace(/[R$\s]/g,'').replace(/\.(?=\d{3}(\D|$))/g,'').replace(',','.'));
+      if(parts[0].trim() && isFinite(v) && v>0) PRICES[parts[0].trim()]=v;
+    });
+  }catch(e){}
+  render(); if(openId) renderDetail();
+}
+function salePrice(p){
+  if(PRICES[p.id]!=null) return PRICES[p.id];
+  const pix=pricesFor(p).find(x=>x.ch.key==='pix'); return pix&&!pix.bad?pix.price:0;
 }
 
 async function boot(){
@@ -471,7 +489,7 @@ function visibleProducts(){
   if(q) list=list.filter(p=>(p.name+' '+(p.adTitle||'')+' '+(p.description||'')).toLowerCase().includes(q));
   const sort=$('sort').value;
   const pix = p => (pricesFor(p).find(x=>x.ch.key==='pix')||{});
-  list.sort((a,b)=> sort==='price' ? (pix(a).price||0)-(pix(b).price||0) : sort==='priceDesc' ? (pix(b).price||0)-(pix(a).price||0) : sort==='cost' ? costOf(a).total-costOf(b).total : sort==='profit' ? (pix(b).profit||0)-(pix(a).profit||0) : sort==='recent' ? (b.createdAt||0)-(a.createdAt||0) : String(a.name).localeCompare(b.name,'pt-BR'));
+  list.sort((a,b)=> sort==='price' ? salePrice(a)-salePrice(b) : sort==='priceDesc' ? salePrice(b)-salePrice(a) : sort==='cost' ? costOf(a).total-costOf(b).total : sort==='profit' ? (pix(b).profit||0)-(pix(a).profit||0) : sort==='recent' ? (b.createdAt||0)-(a.createdAt||0) : String(a.name).localeCompare(b.name,'pt-BR'));
   return list;
 }
 function initials(name){ return String(name||'?').split(/\s+/).filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase(); }
@@ -490,11 +508,11 @@ function renderGrid(){
   }
   g.innerHTML=list.map(p=>{
     const c=costOf(p), pr=pricesFor(p), pix=pr.find(x=>x.ch.key==='pix'), ml=pr.find(x=>x.ch.key==='ml1');
-    if(VITRINE){ const sh=pr.find(x=>x.ch.key==='sh');
+    if(VITRINE){
       return '<button class="card" type="button" data-id="'+esc(p.id)+'">'+thumbHtml(p)+
         '<div class="card-body"><div class="card-name">'+esc(p.name)+'</div>'+
         (p.colorText?'<div class="card-meta">'+esc(p.colorText)+'</div>':'')+
-        '<div class="card-prices"><div><small>No Pix</small><b>'+(pix&&!pix.bad?BRL(pix.price):'—')+'</b></div><div><small>Mercado Livre</small><b>'+(ml&&!ml.bad?BRL(ml.price):'—')+'</b></div></div>'+
+        '<div class="card-prices" style="grid-template-columns:1fr"><div><small>Preço</small><b style="font-size:17px">'+BRL(salePrice(p))+'</b></div></div>'+
         '</div></button>'; }
     return '<button class="card" type="button" data-id="'+esc(p.id)+'">'+thumbHtml(p)+
       '<div class="card-body"><div class="card-name">'+esc(p.name)+'</div>'+
@@ -526,7 +544,7 @@ function renderDetailVitrine(p, el){
   '<div class="sheet-body">'+
     '<section class="hero">'+thumbHtml(p)+
       '<div class="hero-info"><h2 class="prod-name" id="dTitle">'+esc(p.name)+'</h2>'+
-        (pix?'<div><div class="note">A partir de</div><div class="costbig" style="margin:2px 0 0"><small>R$ </small>'+pix.price.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})+'</div><div class="note">na venda direta pelo Pix</div></div>':'')+
+        '<div><div class="costbig" style="margin:2px 0 0"><small>R$ </small>'+salePrice(p).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})+'</div></div>'+
         '<div class="copyblock"><div class="lbl">Descrição</div><div class="txt">'+(p.description?esc(p.description):'<span class="note">Sem descrição.</span>')+'</div></div>'+
       '</div></section>'+
     '<section class="panel"><h3>Detalhes</h3><div class="kv">'+
@@ -535,9 +553,6 @@ function renderDetailVitrine(p, el){
       (dims?'<div><small>Tamanho</small><b>'+esc(dims)+'</b></div>':'')+
       '<div><small>Produção</small><b>Sob encomenda</b></div>'+
     '</div></section>'+
-    '<section class="panel"><h3>Onde comprar</h3><div class="tablewrap"><table class="prices" style="min-width:0"><tbody>'+
-      pr.map(o=>'<tr><td class="chn">'+esc(label(o))+'<small>'+esc(sub(o))+'</small></td><td class="price">'+BRL(o.price)+'</td></tr>').join('')+
-    '</tbody></table></div></section>'+
   '</div>';
   $('dClose').onclick=closeDetail;
 }
@@ -572,6 +587,7 @@ function renderDetail(){
         '<div class="rows">'+c.parts.filter(x=>x[1]>0).map(x=>'<div><span><i class="sw" style="background:'+x[2]+'"></i>'+esc(x[0])+'</span><b>'+BRL(x[1])+'</b></div>').join('')+'<div class="tot"><span>Custo por peça</span><b>'+BRL(c.total)+'</b></div></div>'+
         '<p class="note" style="margin:10px 0 0">Filamento a '+BRL(num(p.filPrice||S.filPrice))+'/kg, energia a '+BRL(num(S.kwh))+'/kWh, impressora de '+num(S.watts)+' W.</p></div>'+
       '<div class="panel"><h3>Preço recomendado para venda</h3><div class="tablewrap"><table class="prices"><thead><tr><th>Canal</th><th>Anunciar por</th><th>Taxas</th><th>Você recebe</th><th>Lucro</th></tr></thead><tbody>'+
+        (STATIC ? (()=>{ const sp=salePrice(p), fee=sp*(num(S.pixFee)+num(S.tax))/100, net=sp-fee, pf=net-c.total; return '<tr><td class="chn">Preço da vitrine<small>Planilha precos.csv · venda direta</small></td><td class="price">'+BRL(sp)+'</td><td>'+BRL(fee)+'</td><td>'+BRL(net)+'</td><td class="'+(pf>=0?'pos':'neg')+'">'+BRL(pf)+' <span class="note">'+(sp?(pf/sp*100).toFixed(0):0)+'%</span></td></tr>'; })() : '')+
         pr.map(o=> o.bad ? '<tr><td class="chn">'+esc(o.ch.name)+'<small>'+esc(o.ch.sub)+'</small></td><td colspan="4" class="neg">Taxas + lucro passam de 100%. Reduza o lucro desejado.</td></tr>' :
           '<tr><td class="chn">'+esc(o.ch.name)+'<small>'+esc(o.ch.sub)+'</small></td><td class="price">'+BRL(o.price)+'</td><td>'+BRL(o.pct+o.fix+o.taxV)+'</td><td>'+BRL(o.net)+'</td><td class="'+(o.profit>=0?'pos':'neg')+'">'+BRL(o.profit)+' <span class="note">'+(o.real*100).toFixed(0)+'%</span></td></tr>').join('')+
         '</tbody></table></div>'+
