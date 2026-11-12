@@ -11,7 +11,7 @@ window.CATALOGO = {
     "config":  {
                    "printerPrice":  2600,
                    "watts":  80,
-                   "lifeH":  6000,
+                   "lifeH":  10000,
                    "maint":  0.3
                },
     "products":  [
