@@ -19,7 +19,7 @@ window.CATALOGO = {
                      {
                          "adTitle":  "Árvore De Natal Minimalista Impressa 3d Decoração Mesa",
                          "catalogId":  "natal",
-                         "colorText":  "verde, marrom e dourado",
+                         "colorText":  "verde, marrom e amarelo",
                          "colors":  [
                                         "#00AE42",
                                         "#6F5034",
@@ -31,14 +31,16 @@ window.CATALOGO = {
                          "dims":  null,
                          "example":  false,
                          "extras":  0,
+                         "filPrice":  90,
                          "grams":  53.8,
                          "kind":  "exact",
-                         "laborMin":  10,
+                         "kit":  "Kit de Natal na bandeja",
+                         "laborMin":  5,
                          "margin":  "",
                          "material":  "PLA",
                          "minutes":  236,
                          "name":  "Árvore de Natal minimalista",
-                         "pack":  "",
+                         "pack":  0.75,
                          "pieces":  1,
                          "plates":  [
                                         {
@@ -49,14 +51,17 @@ window.CATALOGO = {
                                         {
                                             "g":  7.84,
                                             "idx":  "2",
+                                            "off":  false,
                                             "sec":  2288
                                         },
                                         {
                                             "g":  1.04,
                                             "idx":  "3",
+                                            "off":  false,
                                             "sec":  1128
                                         }
                                     ],
+                         "updatedAt":  1794443828690,
                          "id":  "natal-arvore-minimalista",
                          "image":  "img/natal-arvore-minimalista.webp"
                      },
@@ -79,12 +84,13 @@ window.CATALOGO = {
                          "extras":  0,
                          "grams":  41.6,
                          "kind":  "exact",
+                         "kit":  "Kit de Natal na bandeja",
                          "laborMin":  "",
                          "margin":  "",
                          "material":  "PLA",
                          "minutes":  87,
                          "name":  "Bandeja decorativa de Natal",
-                         "pack":  "",
+                         "pack":  0.75,
                          "pieces":  1,
                          "plates":  [
                                         {
@@ -398,12 +404,13 @@ window.CATALOGO = {
                          "extras":  0,
                          "grams":  32.4,
                          "kind":  "exact",
+                         "kit":  "Kit de Natal na bandeja",
                          "laborMin":  15,
                          "margin":  "",
                          "material":  "PLA",
                          "minutes":  251,
                          "name":  "Papai Noel efeito tricô",
-                         "pack":  "",
+                         "pack":  0.75,
                          "pieces":  1,
                          "plates":  [
                                         {
@@ -520,12 +527,13 @@ window.CATALOGO = {
                          "extras":  0,
                          "grams":  20.1,
                          "kind":  "exact",
+                         "kit":  "Kit de Natal na bandeja",
                          "laborMin":  15,
                          "margin":  "",
                          "material":  "PLA",
                          "minutes":  199,
                          "name":  "Rena efeito tricô",
-                         "pack":  "",
+                         "pack":  0.75,
                          "pieces":  1,
                          "plates":  [
                                         {
