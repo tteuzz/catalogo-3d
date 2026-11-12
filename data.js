@@ -9,6 +9,8 @@ window.CATALOGO = {
                      }
                  ],
     "config":  {
+                   "filPrice":  90,
+                   "pack":  3,
                    "printerPrice":  2600,
                    "watts":  80,
                    "lifeH":  10000,
