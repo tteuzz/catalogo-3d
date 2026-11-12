@@ -328,7 +328,7 @@ window.CATALOGO = {
                          "dims":  null,
                          "example":  false,
                          "extras":  0,
-                         "filPrice":  96.3,
+                         "filPrice":  "",
                          "grams":  147.9,
                          "kind":  "exact",
                          "kitItems":  [
@@ -367,6 +367,7 @@ window.CATALOGO = {
                                   ],
                          "example":  false,
                          "extras":  0,
+                         "filPrice":  90,
                          "grams":  31.7,
                          "kind":  "exact",
                          "laborMin":  5,
@@ -374,7 +375,7 @@ window.CATALOGO = {
                          "material":  "PLA",
                          "minutes":  145,
                          "name":  "Mini Jesus sentado (monitor ou prateleira)",
-                         "pack":  "",
+                         "pack":  1.5,
                          "pieces":  1,
                          "plates":  [
                                         {
@@ -383,6 +384,7 @@ window.CATALOGO = {
                                             "sec":  8700
                                         }
                                     ],
+                         "updatedAt":  1794445289635,
                          "id":  "natal-mini-jesus-sentado",
                          "image":  "img/natal-mini-jesus-sentado.webp"
                      },
