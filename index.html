@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
 <script>window.MODO = "vitrine";</script>
-<script src="data.js?v=11"></script>
+<script src="data.js?v=12"></script>
 <style>
 /* Layout: vitrine de oficina — abas de catálogo no topo, grade de produtos, ficha do produto em painel sobreposto, editor e configurações como painéis */
 :root{
@@ -230,10 +230,30 @@ const DEFAULTS = {
 let S = {...DEFAULTS};
 
 /* ================= custo e preço ================= */
+/* filamento e tempo POR PEÇA, considerando cópias por mesa:
+   em cada mesa, a parte compartilhada (preparação, descarte de cor, torre de purga) se divide entre as cópias */
+function eff(p, depth=0){
+  if(p.kitItems && p.kitItems.length && depth<2 && typeof products!=='undefined'){
+    let g=0, m=0, found=0;
+    p.kitItems.forEach(id=>{ const q=products.find(x=>x.id===id); if(q){ const e=eff(q,depth+1); g+=e.g; m+=e.min; found++; } });
+    if(found===p.kitItems.length) return {g, min:m, kit:true};
+  }
+  const pls=(p.plates||[]).filter(pl=>!pl.off);
+  const sumG=pls.reduce((a,pl)=>a+(+pl.g||0),0);
+  if(pls.length && Math.abs(sumG-num(p.grams))<0.6){
+    let g=0, s=0;
+    pls.forEach(pl=>{ const n=Math.max(1,Math.round(+pl.copies||1)), sec=+pl.sec||0, gg=+pl.g||0;
+      const ss=Math.min(pl.sharedSec!=null?+pl.sharedSec:300, sec), sg=Math.min(+pl.sharedG||0, gg);
+      s+=(sec-ss)+ss/n; g+=(gg-sg)+sg/n; });
+    return {g, min:s/60, copies:pls.map(pl=>Math.max(1,Math.round(+pl.copies||1)))};
+  }
+  return {g:num(p.grams), min:num(p.minutes)};
+}
 function costOf(p, s=S){
-  const n = Math.max(1, Math.round(num(p.pieces)||1));
-  const h = num(p.minutes)/60;
-  const fil = num(p.grams)/1000*num(p.filPrice||s.filPrice);
+  const E = eff(p);
+  const n = (E.copies||E.kit) ? 1 : Math.max(1, Math.round(num(p.pieces)||1));
+  const h = E.min/60;
+  const fil = E.g/1000*num(p.filPrice||s.filPrice);
   const en  = h*num(s.watts)/1000*num(s.kwh);
   const dep = h*(num(s.printerPrice)/Math.max(1,num(s.lifeH)) + num(s.maint));
   const fail= (fil+en+dep)*num(s.fail)/100;
@@ -516,7 +536,7 @@ function renderGrid(){
         '</div></button>'; }
     return '<button class="card" type="button" data-id="'+esc(p.id)+'">'+thumbHtml(p)+
       '<div class="card-body"><div class="card-name">'+esc(p.name)+'</div>'+
-      '<div class="card-meta">'+num(p.grams).toLocaleString('pt-BR')+' g · '+fmtH(p.minutes)+(num(p.pieces)>1?' · '+p.pieces+' por mesa':'')+'</div>'+
+      (()=>{ const E=eff(p); return '<div class="card-meta">'+(+E.g.toFixed(1)).toLocaleString('pt-BR')+' g · '+fmtH(E.min)+(E.copies&&E.copies.some(n=>n>1)?' · por peça':'')+(num(p.pieces)>1?' · '+p.pieces+' por mesa':'')+'</div>'; })()+
       '<div class="card-prices"><div><small>Custo</small><b>'+BRL(c.total)+'</b></div><div><small>Pix</small><b>'+(pix&&!pix.bad?BRL(pix.price):'—')+'</b></div>'+
       '<div><small>Mercado Livre</small><b>'+(ml&&!ml.bad?BRL(ml.price):'—')+'</b></div><div><small>Lucro no Pix</small><b class="'+(pix&&pix.profit>=0?'pos':'neg')+'">'+(pix&&!pix.bad?BRL(pix.profit):'—')+'</b></div></div>'+
       '</div></button>';
@@ -573,9 +593,11 @@ function renderDetail(){
         '<div class="copyblock"><div class="lbl">Descrição <button class="btn plain sm" type="button" data-copy="desc">Copiar</button></div><div class="txt">'+(p.description?esc(p.description):'<span class="note">Sem descrição. Clique em Editar para escrever ou gerar uma.</span>')+'</div></div>'+
       '</div></section>'+
     '<section class="panel"><h3>Ficha técnica</h3><div class="kv">'+
-      '<div><small>Filamento</small><b>'+num(p.grams).toLocaleString('pt-BR')+' g</b></div>'+
-      '<div><small>Tempo de impressão</small><b>'+fmtH(p.minutes)+'</b></div>'+
-      '<div><small>Peças por impressão</small><b>'+(p.pieces||1)+'</b></div>'+
+      (()=>{ const E=eff(p), multi=E.copies&&E.copies.some(n=>n>1);
+        return '<div><small>Filamento por peça</small><b>'+(+E.g.toFixed(1)).toLocaleString('pt-BR')+' g</b></div>'+
+          '<div><small>Tempo por peça</small><b>'+fmtH(E.min)+'</b></div>'+
+          (E.copies?'<div><small>Cópias por mesa</small><b>'+E.copies.join(' / ')+'</b></div>':E.kit?'<div><small>Kit</small><b>'+p.kitItems.length+' itens</b></div>':'<div><small>Peças por impressão</small><b>'+(p.pieces||1)+'</b></div>')+
+          (multi?'<div><small>Uma peça sozinha</small><b>'+num(p.grams).toLocaleString('pt-BR')+' g · '+fmtH(p.minutes)+'</b></div>':''); })()+
       '<div><small>Material</small><b>'+esc(p.material||'PLA')+'</b></div>'+
       '<div><small>Cores</small><b>'+(p.colors&&p.colors.length?p.colors.map(x=>'<span class="sw" style="display:inline-block;background:'+esc(x)+';border:1px solid var(--line);margin-right:3px"></span>').join(''):esc(p.colorText||'—'))+'</b></div>'+
       '<div><small>Tamanho</small><b>'+esc(dims)+'</b></div>'+

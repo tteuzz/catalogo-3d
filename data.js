@@ -46,21 +46,31 @@ window.CATALOGO = {
                          "pieces":  1,
                          "plates":  [
                                         {
+                                            "copies":  4,
+                                            "fit":  4,
                                             "g":  44.96,
                                             "idx":  "1",
-                                            "sec":  10722
+                                            "sec":  10722,
+                                            "sharedG":  0,
+                                            "sharedSec":  392
                                         },
                                         {
+                                            "copies":  8,
+                                            "fit":  8,
                                             "g":  7.84,
                                             "idx":  "2",
-                                            "off":  false,
-                                            "sec":  2288
+                                            "sec":  2288,
+                                            "sharedG":  0,
+                                            "sharedSec":  392
                                         },
                                         {
+                                            "copies":  8,
+                                            "fit":  8,
                                             "g":  1.04,
                                             "idx":  "3",
-                                            "off":  false,
-                                            "sec":  1128
+                                            "sec":  1128,
+                                            "sharedG":  0,
+                                            "sharedSec":  392
                                         }
                                     ],
                          "updatedAt":  1794443828690,
@@ -96,9 +106,13 @@ window.CATALOGO = {
                          "pieces":  1,
                          "plates":  [
                                         {
+                                            "copies":  1,
+                                            "fit":  1,
                                             "g":  41.59,
                                             "idx":  "1",
-                                            "sec":  5230
+                                            "sec":  5230,
+                                            "sharedG":  0,
+                                            "sharedSec":  376
                                         }
                                     ],
                          "id":  "natal-bandeja",
@@ -131,24 +145,40 @@ window.CATALOGO = {
                          "pieces":  1,
                          "plates":  [
                                         {
+                                            "copies":  6,
+                                            "fit":  6,
                                             "g":  11.43,
                                             "idx":  "1",
-                                            "sec":  4968
+                                            "sec":  4968,
+                                            "sharedG":  0,
+                                            "sharedSec":  317
                                         },
                                         {
+                                            "copies":  5,
+                                            "fit":  5,
                                             "g":  13.5,
                                             "idx":  "2",
-                                            "sec":  6063
+                                            "sec":  6063,
+                                            "sharedG":  0,
+                                            "sharedSec":  316
                                         },
                                         {
+                                            "copies":  8,
+                                            "fit":  8,
                                             "g":  0.57,
                                             "idx":  "3",
-                                            "sec":  691
+                                            "sec":  691,
+                                            "sharedG":  0,
+                                            "sharedSec":  317
                                         },
                                         {
+                                            "copies":  8,
+                                            "fit":  8,
                                             "g":  0.32,
                                             "idx":  "4",
-                                            "sec":  702
+                                            "sec":  702,
+                                            "sharedG":  0,
+                                            "sharedSec":  317
                                         }
                                     ],
                          "id":  "natal-boneco-de-neve",
@@ -182,9 +212,13 @@ window.CATALOGO = {
                          "pieces":  1,
                          "plates":  [
                                         {
+                                            "copies":  8,
+                                            "fit":  8,
                                             "g":  7.08,
                                             "idx":  "1",
-                                            "sec":  2100
+                                            "sec":  2110,
+                                            "sharedG":  0,
+                                            "sharedSec":  427
                                         }
                                     ],
                          "id":  "natal-cadeira-mini-jesus",
@@ -220,49 +254,85 @@ window.CATALOGO = {
                          "pieces":  1,
                          "plates":  [
                                         {
+                                            "copies":  8,
+                                            "fit":  8,
                                             "g":  5.46,
                                             "idx":  "1",
-                                            "sec":  1518
+                                            "sec":  1518,
+                                            "sharedG":  2,
+                                            "sharedSec":  904
                                         },
                                         {
+                                            "copies":  4,
+                                            "fit":  4,
                                             "g":  102.39,
                                             "idx":  "2",
-                                            "sec":  16160
+                                            "sec":  16160,
+                                            "sharedG":  0,
+                                            "sharedSec":  373
                                         },
                                         {
+                                            "copies":  4,
+                                            "fit":  4,
                                             "g":  84.84,
                                             "idx":  "3",
-                                            "sec":  12757
+                                            "sec":  12757,
+                                            "sharedG":  0,
+                                            "sharedSec":  382
                                         },
                                         {
+                                            "copies":  1,
+                                            "fit":  1,
                                             "g":  69.85,
                                             "idx":  "4",
-                                            "sec":  10363
+                                            "sec":  10363,
+                                            "sharedG":  3,
+                                            "sharedSec":  792
                                         },
                                         {
+                                            "copies":  1,
+                                            "fit":  1,
                                             "g":  69.85,
                                             "idx":  "5",
-                                            "sec":  10370
+                                            "sec":  10370,
+                                            "sharedG":  3,
+                                            "sharedSec":  791
                                         },
                                         {
+                                            "copies":  7,
+                                            "fit":  7,
                                             "g":  4.43,
                                             "idx":  "6",
-                                            "sec":  1136
+                                            "sec":  1136,
+                                            "sharedG":  1,
+                                            "sharedSec":  589
                                         },
                                         {
+                                            "copies":  8,
+                                            "fit":  8,
                                             "g":  4.02,
                                             "idx":  "7",
-                                            "sec":  1438
+                                            "sec":  1438,
+                                            "sharedG":  0,
+                                            "sharedSec":  382
                                         },
                                         {
+                                            "copies":  8,
+                                            "fit":  8,
                                             "g":  0.92,
                                             "idx":  "8",
-                                            "sec":  892
+                                            "sec":  892,
+                                            "sharedG":  0,
+                                            "sharedSec":  383
                                         },
                                         {
+                                            "copies":  8,
+                                            "fit":  8,
                                             "g":  0.64,
                                             "idx":  "9",
-                                            "sec":  780
+                                            "sec":  780,
+                                            "sharedG":  0,
+                                            "sharedSec":  382
                                         }
                                     ],
                          "id":  "natal-calendario-lareira",
@@ -295,19 +365,31 @@ window.CATALOGO = {
                          "pieces":  1,
                          "plates":  [
                                         {
+                                            "copies":  8,
+                                            "fit":  8,
                                             "g":  29.21,
                                             "idx":  "1",
-                                            "sec":  8760
+                                            "sec":  8736,
+                                            "sharedG":  15,
+                                            "sharedSec":  3315
                                         },
                                         {
+                                            "copies":  8,
+                                            "fit":  8,
                                             "g":  6.46,
                                             "idx":  "2",
-                                            "sec":  2520
+                                            "sec":  2539,
+                                            "sharedG":  0,
+                                            "sharedSec":  315
                                         },
                                         {
+                                            "copies":  8,
+                                            "fit":  8,
                                             "g":  0.09,
                                             "idx":  "3",
-                                            "sec":  360
+                                            "sec":  378,
+                                            "sharedG":  0,
+                                            "sharedSec":  316
                                         }
                                     ],
                          "id":  "natal-jesus-trico",
@@ -377,16 +459,20 @@ window.CATALOGO = {
                          "material":  "PLA",
                          "minutes":  145,
                          "name":  "Mini Jesus sentado (monitor ou prateleira)",
-                         "pack":  1.5,
+                         "pack":  1,
                          "pieces":  1,
                          "plates":  [
                                         {
+                                            "copies":  10,
+                                            "fit":  10,
                                             "g":  31.72,
                                             "idx":  "1",
-                                            "sec":  8700
+                                            "sec":  8684,
+                                            "sharedG":  28,
+                                            "sharedSec":  5804
                                         }
                                     ],
-                         "updatedAt":  1794445289635,
+                         "updatedAt":  1794445510287,
                          "id":  "natal-mini-jesus-sentado",
                          "image":  "img/natal-mini-jesus-sentado.webp"
                      },
@@ -418,9 +504,13 @@ window.CATALOGO = {
                          "pieces":  1,
                          "plates":  [
                                         {
+                                            "copies":  1,
+                                            "fit":  1,
                                             "g":  65.33,
                                             "idx":  "1",
-                                            "sec":  6477
+                                            "sec":  6477,
+                                            "sharedG":  0,
+                                            "sharedSec":  390
                                         }
                                     ],
                          "id":  "natal-nossa-senhora-terco",
@@ -454,24 +544,40 @@ window.CATALOGO = {
                          "pieces":  1,
                          "plates":  [
                                         {
+                                            "copies":  4,
+                                            "fit":  4,
                                             "g":  12.42,
                                             "idx":  "1",
-                                            "sec":  5673
+                                            "sec":  5673,
+                                            "sharedG":  0,
+                                            "sharedSec":  317
                                         },
                                         {
+                                            "copies":  3,
+                                            "fit":  3,
                                             "g":  16.23,
                                             "idx":  "2",
-                                            "sec":  6511
+                                            "sec":  6511,
+                                            "sharedG":  0,
+                                            "sharedSec":  316
                                         },
                                         {
+                                            "copies":  8,
+                                            "fit":  8,
                                             "g":  1.72,
                                             "idx":  "3",
-                                            "sec":  1249
+                                            "sec":  1249,
+                                            "sharedG":  0,
+                                            "sharedSec":  317
                                         },
                                         {
+                                            "copies":  8,
+                                            "fit":  8,
                                             "g":  2.03,
                                             "idx":  "4",
-                                            "sec":  1602
+                                            "sec":  1602,
+                                            "sharedG":  0,
+                                            "sharedSec":  317
                                         }
                                     ],
                          "id":  "natal-papai-noel-trico",
@@ -505,9 +611,13 @@ window.CATALOGO = {
                          "pieces":  1,
                          "plates":  [
                                         {
+                                            "copies":  1,
+                                            "fit":  1,
                                             "g":  46.41,
                                             "idx":  "1",
-                                            "sec":  5978
+                                            "sec":  5978,
+                                            "sharedG":  0,
+                                            "sharedSec":  392
                                         }
                                     ],
                          "id":  "natal-placa-feliz-natal",
@@ -541,9 +651,13 @@ window.CATALOGO = {
                          "pieces":  1,
                          "plates":  [
                                         {
+                                            "copies":  3,
+                                            "fit":  3,
                                             "g":  70.81,
                                             "idx":  "1",
-                                            "sec":  10388
+                                            "sec":  10388,
+                                            "sharedG":  0,
+                                            "sharedSec":  391
                                         }
                                     ],
                          "id":  "natal-presepio-minimalista",
@@ -577,24 +691,40 @@ window.CATALOGO = {
                          "pieces":  1,
                          "plates":  [
                                         {
+                                            "copies":  7,
+                                            "fit":  7,
                                             "g":  18.31,
                                             "idx":  "1",
-                                            "sec":  9644
+                                            "sec":  9644,
+                                            "sharedG":  0,
+                                            "sharedSec":  315
                                         },
                                         {
+                                            "copies":  8,
+                                            "fit":  8,
                                             "g":  1.27,
                                             "idx":  "2",
-                                            "sec":  1135
+                                            "sec":  1135,
+                                            "sharedG":  0,
+                                            "sharedSec":  317
                                         },
                                         {
+                                            "copies":  8,
+                                            "fit":  8,
                                             "g":  0.24,
                                             "idx":  "3",
-                                            "sec":  576
+                                            "sec":  576,
+                                            "sharedG":  0,
+                                            "sharedSec":  317
                                         },
                                         {
+                                            "copies":  8,
+                                            "fit":  8,
                                             "g":  0.24,
                                             "idx":  "4",
-                                            "sec":  574
+                                            "sec":  574,
+                                            "sharedG":  0,
+                                            "sharedSec":  317
                                         }
                                     ],
                          "id":  "natal-rena-trico",
@@ -626,19 +756,31 @@ window.CATALOGO = {
                          "pieces":  1,
                          "plates":  [
                                         {
+                                            "copies":  2,
+                                            "fit":  2,
                                             "g":  108.92,
                                             "idx":  "1",
-                                            "sec":  7511
+                                            "sec":  7511,
+                                            "sharedG":  0,
+                                            "sharedSec":  376
                                         },
                                         {
+                                            "copies":  1,
+                                            "fit":  1,
                                             "g":  99.7,
                                             "idx":  "2",
-                                            "sec":  15840
+                                            "sec":  15840,
+                                            "sharedG":  0,
+                                            "sharedSec":  366
                                         },
                                         {
+                                            "copies":  1,
+                                            "fit":  1,
                                             "g":  101.4,
                                             "idx":  "3",
-                                            "sec":  10177
+                                            "sec":  10177,
+                                            "sharedG":  0,
+                                            "sharedSec":  377
                                         }
                                     ],
                          "id":  "natal-suporte-parede-grinch",
@@ -670,19 +812,31 @@ window.CATALOGO = {
                          "pieces":  1,
                          "plates":  [
                                         {
+                                            "copies":  8,
+                                            "fit":  8,
                                             "g":  14.75,
                                             "idx":  "1",
-                                            "sec":  7616
+                                            "sec":  7616,
+                                            "sharedG":  0,
+                                            "sharedSec":  399
                                         },
                                         {
+                                            "copies":  8,
+                                            "fit":  8,
                                             "g":  1.89,
                                             "idx":  "2",
-                                            "sec":  1535
+                                            "sec":  1535,
+                                            "sharedG":  0,
+                                            "sharedSec":  399
                                         },
                                         {
+                                            "copies":  8,
+                                            "fit":  8,
                                             "g":  0.33,
                                             "idx":  "3",
-                                            "sec":  777
+                                            "sec":  777,
+                                            "sharedG":  0,
+                                            "sharedSec":  399
                                         }
                                     ],
                          "id":  "natal-urso-polar",
