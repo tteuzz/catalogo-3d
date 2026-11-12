@@ -312,6 +312,42 @@ window.CATALOGO = {
                          "image":  "img/natal-jesus-trico.webp"
                      },
                      {
+                         "adTitle":  "Kit Decoração De Natal Impresso 3d Papai Noel Rena Árvore",
+                         "catalogId":  "natal",
+                         "colorText":  "vermelho, branco, verde, caramelo, marrom e preto",
+                         "colors":  [
+                                        "#C12E1F",
+                                        "#FFFFFF",
+                                        "#00AE42",
+                                        "#B5865B",
+                                        "#6F5034",
+                                        "#000000"
+                                    ],
+                         "createdAt":  1794444000000,
+                         "description":  "Kit pronto para decorar a mesa de Natal: Papai Noel e rena com efeito tricô, árvore de Natal minimalista e uma bandeja decorativa para reunir tudo. Ótimo para presentear.\n\nO KIT INCLUI\n- Papai Noel efeito tricô (cerca de 6 a 7 cm)\n- Rena efeito tricô (cerca de 7 cm)\n- Árvore de Natal minimalista (cerca de 13 cm)\n- Bandeja decorativa com borda ondulada (cerca de 20 x 20 cm)\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Enviado em uma única embalagem\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeças feitas sob encomenda em impressão 3D, podem ter pequenas marcas naturais das camadas. Contém peças pequenas, não indicado para menores de 3 anos.",
+                         "dims":  null,
+                         "example":  false,
+                         "extras":  0,
+                         "filPrice":  96.3,
+                         "grams":  147.9,
+                         "kind":  "exact",
+                         "kitItems":  [
+                                          "natal-papai-noel-trico",
+                                          "natal-arvore-minimalista",
+                                          "natal-rena-trico",
+                                          "natal-bandeja"
+                                      ],
+                         "laborMin":  0,
+                         "margin":  "",
+                         "material":  "PLA",
+                         "minutes":  773,
+                         "name":  "Kit de Natal na bandeja (Papai Noel, Árvore, Rena e Bandeja)",
+                         "pack":  3,
+                         "pieces":  1,
+                         "id":  "natal-kit-bandeja",
+                         "image":  "img/natal-kit-bandeja.webp"
+                     },
+                     {
                          "adTitle":  "Mini Jesus Sentado Impresso 3d Enfeite Monitor Prateleira",
                          "catalogId":  "natal",
                          "colorText":  "branco, marrom, pele e preto",
