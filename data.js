@@ -1,5 +1,5 @@
 window.CATALOGO = {
-    "updated":  "2026-11-10",
+    "updated":  "2026-11-11",
     "catalogs":  [
                      {
                          "id":  "natal",
@@ -8,6 +8,12 @@ window.CATALOGO = {
                          "order":  0
                      }
                  ],
+    "config":  {
+                   "printerPrice":  2600,
+                   "watts":  80,
+                   "lifeH":  6000,
+                   "maint":  0.3
+               },
     "products":  [
                      {
                          "adTitle":  "Árvore De Natal Minimalista Impressa 3d Decoração Mesa",
