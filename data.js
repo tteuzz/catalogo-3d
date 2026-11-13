@@ -13,9 +13,10 @@ window.CATALOGO = {
                    "pack":  3,
                    "printerPrice":  2600,
                    "watts":  80,
-                   "lifeH":  10000,
-                   "maint":  0.3,
-                   "laborRate":  0
+                   "lifeH":  15000,
+                   "maint":  0.1,
+                   "laborRate":  0,
+                   "fail":  5
                },
     "products":  [
                      {
