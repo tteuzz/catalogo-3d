@@ -1,5 +1,5 @@
 window.CATALOGO = {
-    "updated":  "2026-11-11",
+    "updated":  "2026-11-13",
     "catalogs":  [
                      {
                          "id":  "natal",
@@ -430,6 +430,43 @@ window.CATALOGO = {
                          "pieces":  1,
                          "id":  "natal-kit-bandeja",
                          "image":  "img/natal-kit-bandeja.webp"
+                     },
+                     {
+                         "adTitle":  "Kit Natal Impresso 3d Papai Noel Rena Árvore Placa Feliz Natal",
+                         "catalogId":  "natal",
+                         "colorText":  "vermelho, branco, verde, caramelo, marrom e preto",
+                         "colors":  [
+                                        "#C12E1F",
+                                        "#FFFFFF",
+                                        "#00AE42",
+                                        "#B5865B",
+                                        "#6F5034",
+                                        "#000000"
+                                    ],
+                         "createdAt":  1794530000000,
+                         "description":  "Kit completo para decorar a mesa de Natal: Papai Noel e rena com efeito tricô, árvore de Natal minimalista, bandeja decorativa e a placa Feliz Natal com floco de neve. Ótimo para presentear.\n\nO KIT INCLUI\n- Papai Noel efeito tricô (cerca de 6 a 7 cm)\n- Rena efeito tricô (cerca de 7 cm)\n- Árvore de Natal minimalista (cerca de 13 cm)\n- Bandeja decorativa com borda ondulada (cerca de 20 x 20 cm)\n- Placa Feliz Natal com floco de neve (cerca de 13 x 14 cm)\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Enviado em uma única embalagem\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeças feitas sob encomenda em impressão 3D, podem ter pequenas marcas naturais das camadas. Contém peças pequenas, não indicado para menores de 3 anos.",
+                         "dims":  null,
+                         "example":  false,
+                         "extras":  0,
+                         "filPrice":  "",
+                         "grams":  194.3,
+                         "kind":  "exact",
+                         "kitItems":  [
+                                          "natal-papai-noel-trico",
+                                          "natal-arvore-minimalista",
+                                          "natal-rena-trico",
+                                          "natal-bandeja",
+                                          "natal-placa-feliz-natal"
+                                      ],
+                         "laborMin":  0,
+                         "margin":  "",
+                         "material":  "PLA",
+                         "minutes":  873,
+                         "name":  "Kit de Natal na bandeja + Placa Feliz Natal",
+                         "pack":  3,
+                         "pieces":  1,
+                         "id":  "natal-kit-bandeja-placa",
+                         "image":  "img/natal-kit-bandeja-placa.jpg"
                      },
                      {
                          "adTitle":  "Mini Jesus Sentado Impresso 3d Enfeite Monitor Prateleira",
