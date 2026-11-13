@@ -277,10 +277,10 @@ function mesaInfo(p){ const one=costOf(p,S,'one'), max=costOf(p,S,'max'); return
 function mesaMini(p){ const m=mesaInfo(p); return m.same ? '' : '<span style="display:block;font-size:11px;color:var(--muted)">1 por mesa: '+BRL(m.one.total)+'</span>'; }
 function mesaCompare(p){
   const m=mesaInfo(p), kit=p.kitItems&&p.kitItems.length, fits=!kit&&m.Em.copies?m.Em.copies.join(' / '):'';
-  if(m.same) return '<p class="note" style="margin:0 0 10px">Mesmo custo imprimindo 1 ou vÃ¡rias peÃ§as por mesa.</p>';
+  if(m.same) return '<p class="note" style="margin:0 0 10px">Mesmo custo imprimindo 1 ou várias peças por mesa.</p>';
   return '<div class="kv" style="margin-bottom:12px">'+
-    '<div><small>1 '+(kit?'kit':'peÃ§a')+' por mesa</small><b>'+BRL(m.one.total)+'</b><span class="note" style="display:block">'+fmtH(m.E1.min)+' de impressÃ£o</span></div>'+
-    '<div><small>Mesa cheia'+(fits?' ('+fits+' por mesa)':kit?' (cada peÃ§a no mÃ¡ximo)':'')+'</small><b>'+BRL(m.max.total)+'</b><span class="note" style="display:block">'+fmtH(m.Em.min)+' por '+(kit?'kit':'peÃ§a')+' Â· economia de '+BRL(m.one.total-m.max.total)+'</span></div></div>';
+    '<div><small>1 '+(kit?'kit':'peça')+' por mesa</small><b>'+BRL(m.one.total)+'</b><span class="note" style="display:block">'+fmtH(m.E1.min)+' de impressão</span></div>'+
+    '<div><small>Mesa cheia'+(fits?' ('+fits+' por mesa)':kit?' (cada peça no máximo)':'')+'</small><b>'+BRL(m.max.total)+'</b><span class="note" style="display:block">'+fmtH(m.Em.min)+' por '+(kit?'kit':'peça')+' · economia de '+BRL(m.one.total-m.max.total)+'</span></div></div>';
 }
 function channels(s=S){
   const P=v=>num(v)/100, cpf = s.shCpf ? 3 : 0;
