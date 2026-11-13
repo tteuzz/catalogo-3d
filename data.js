@@ -117,7 +117,7 @@ window.CATALOGO = {
                                         }
                                     ],
                          "id":  "natal-bandeja",
-                         "image":  "img/natal-bandeja.webp"
+                         "image":  "img/natal-bandeja.jpg"
                      },
                      {
                          "adTitle":  "Boneco De Neve Tricô Impresso 3d Enfeite De Natal",
