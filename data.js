@@ -10,7 +10,7 @@ window.CATALOGO = {
                  ],
     "config":  {
                    "filPrice":  90,
-                   "pack":  3,
+                   "pack":  1,
                    "printerPrice":  2600,
                    "watts":  80,
                    "lifeH":  15000,
@@ -142,7 +142,7 @@ window.CATALOGO = {
                          "material":  "PLA",
                          "minutes":  207,
                          "name":  "Boneco de neve efeito tricô",
-                         "pack":  "",
+                         "pack":  1,
                          "pieces":  1,
                          "plates":  [
                                         {
@@ -209,7 +209,7 @@ window.CATALOGO = {
                          "material":  "PLA",
                          "minutes":  35,
                          "name":  "Cadeira trono para Mini Jesus",
-                         "pack":  "",
+                         "pack":  1,
                          "pieces":  1,
                          "plates":  [
                                         {
@@ -251,7 +251,7 @@ window.CATALOGO = {
                          "material":  "PLA",
                          "minutes":  924,
                          "name":  "Calendário do Advento lareira",
-                         "pack":  6,
+                         "pack":  1,
                          "pieces":  1,
                          "plates":  [
                                         {
@@ -362,7 +362,7 @@ window.CATALOGO = {
                          "material":  "PLA",
                          "minutes":  194,
                          "name":  "Jesus efeito tricô",
-                         "pack":  "",
+                         "pack":  1,
                          "pieces":  1,
                          "plates":  [
                                         {
@@ -427,7 +427,7 @@ window.CATALOGO = {
                          "material":  "PLA",
                          "minutes":  773,
                          "name":  "Kit de Natal na bandeja (Papai Noel, Árvore, Rena e Bandeja)",
-                         "pack":  3,
+                         "pack":  1,
                          "pieces":  1,
                          "id":  "natal-kit-bandeja",
                          "image":  "img/natal-kit-bandeja.webp"
@@ -464,7 +464,7 @@ window.CATALOGO = {
                          "material":  "PLA",
                          "minutes":  873,
                          "name":  "Kit de Natal na bandeja + Placa Feliz Natal",
-                         "pack":  3,
+                         "pack":  1,
                          "pieces":  1,
                          "id":  "natal-kit-bandeja-placa",
                          "image":  "img/natal-kit-bandeja-placa.jpg"
@@ -501,7 +501,7 @@ window.CATALOGO = {
     "material":  "PLA",
     "minutes":  739,
     "name":  "Kit de Natal na bandeja (Papai Noel, Urso polar e Árvore)",
-    "pack":  3,
+    "pack":  1,
     "pieces":  1,
     "id":  "natal-kit-papai-urso",
     "image":  "img/natal-kit-papai-urso.jpg"
@@ -538,7 +538,7 @@ window.CATALOGO = {
     "material":  "PLA",
     "minutes":  695,
     "name":  "Kit Inverno na bandeja (Boneco de neve, Urso polar e Árvore)",
-    "pack":  3,
+    "pack":  1,
     "pieces":  1,
     "id":  "natal-kit-inverno",
     "image":  "img/natal-kit-inverno.jpg"
@@ -575,7 +575,7 @@ window.CATALOGO = {
     "material":  "PLA",
     "minutes":  744,
     "name":  "Kit Tricô na bandeja (Papai Noel, Rena e Boneco de neve)",
-    "pack":  3,
+    "pack":  1,
     "pieces":  1,
     "id":  "natal-kit-trico",
     "image":  "img/natal-kit-trico.jpg"
@@ -613,7 +613,7 @@ window.CATALOGO = {
     "material":  "PLA",
     "minutes":  729,
     "name":  "Kit de Natal na bandeja (Boneco de neve, Rena e Árvore)",
-    "pack":  3,
+    "pack":  1,
     "pieces":  1,
     "id":  "natal-kit-boneco-rena",
     "image":  "img/natal-kit-boneco-rena.jpg"
@@ -651,7 +651,7 @@ window.CATALOGO = {
     "material":  "PLA",
     "minutes":  690,
     "name":  "Kit Natal Sagrado na bandeja (Presépio, Jesus tricô e Árvore)",
-    "pack":  3,
+    "pack":  1,
     "pieces":  1,
     "id":  "natal-kit-sagrado",
     "image":  "img/natal-kit-sagrado.jpg"
@@ -689,7 +689,7 @@ window.CATALOGO = {
     "material":  "PLA",
     "minutes":  839,
     "name":  "Kit de Natal na bandeja (Papai Noel, Urso polar e Árvore) + Placa Feliz Natal",
-    "pack":  3,
+    "pack":  1,
     "pieces":  1,
     "id":  "natal-kit-papai-urso-placa",
     "image":  "img/natal-kit-papai-urso-placa.jpg"
@@ -727,7 +727,7 @@ window.CATALOGO = {
     "material":  "PLA",
     "minutes":  795,
     "name":  "Kit Inverno na bandeja (Boneco de neve, Urso polar e Árvore) + Placa Feliz Natal",
-    "pack":  3,
+    "pack":  1,
     "pieces":  1,
     "id":  "natal-kit-inverno-placa",
     "image":  "img/natal-kit-inverno-placa.jpg"
@@ -769,7 +769,7 @@ window.CATALOGO = {
     "material":  "PLA",
     "minutes":  1245,
     "name":  "Kit de Natal completo (Papai Noel, Rena, Boneco de neve, Urso polar, Árvore, Placa e Bandeja)",
-    "pack":  3,
+    "pack":  1,
     "pieces":  1,
     "id":  "natal-kit-completo",
     "image":  "img/natal-kit-completo.jpg"
@@ -843,7 +843,7 @@ window.CATALOGO = {
                          "material":  "PLA",
                          "minutes":  108,
                          "name":  "Nossa Senhora porta-terço",
-                         "pack":  "",
+                         "pack":  1,
                          "pieces":  1,
                          "plates":  [
                                         {
@@ -950,7 +950,7 @@ window.CATALOGO = {
                          "material":  "PLA",
                          "minutes":  100,
                          "name":  "Placa Feliz Natal com floco de neve",
-                         "pack":  "",
+                         "pack":  1,
                          "pieces":  1,
                          "plates":  [
                                         {
@@ -990,7 +990,7 @@ window.CATALOGO = {
                          "material":  "PLA",
                          "minutes":  173,
                          "name":  "Presépio minimalista (José, Maria e Menino Jesus)",
-                         "pack":  "",
+                         "pack":  1,
                          "pieces":  1,
                          "plates":  [
                                         {
@@ -1095,7 +1095,7 @@ window.CATALOGO = {
                          "material":  "PLA",
                          "minutes":  559,
                          "name":  "Suporte de parede Grinch (braço com bola)",
-                         "pack":  5,
+                         "pack":  1,
                          "pieces":  1,
                          "plates":  [
                                         {
@@ -1151,7 +1151,7 @@ window.CATALOGO = {
                          "material":  "PLA",
                          "minutes":  165,
                          "name":  "Urso polar com gorro de Natal",
-                         "pack":  "",
+                         "pack":  1,
                          "pieces":  1,
                          "plates":  [
                                         {
