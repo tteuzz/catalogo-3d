@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
-<script src="data.js?v=18"></script>
+<script src="data.js?v=19"></script>
 <style>
 /* Layout: vitrine de oficina — abas de catálogo no topo, grade de produtos, ficha do produto em painel sobreposto, editor e configurações como painéis */
 :root{
@@ -219,7 +219,7 @@ const catColor = c => 'var(--cat-'+(CAT_COLORS.includes(c)?c:'teal')+')';
 
 /* ================= configurações padrão ================= */
 const DEFAULTS = {
-  filPrice:99.90, fail:8, watts:130, kwh:0.95, printerPrice:5500, lifeH:6000, maint:0.30,
+  filPrice:99.90, fail:8, watts:130, kwh:0.95,
   laborRate:25, laborMin:10, pack:3.00, margin:35, tax:0,
   pixFee:0, pixMargin:'', mlClassico:12, mlPremium:17, mlCustoOp:6.75, mlFrete:22,
   sh1p:20, sh1f:4, sh2p:14, sh2f:16, sh3p:14, sh3f:20, sh4p:14, sh4f:26, shCpf:false,
@@ -255,8 +255,7 @@ function costOf(p, s=S, mode){
   const h = E.min/60;
   const fil = E.g/1000*num(p.filPrice||s.filPrice);
   const en  = h*num(s.watts)/1000*num(s.kwh);
-  const dep = h*(num(s.printerPrice)/Math.max(1,num(s.lifeH)) + num(s.maint));
-  const fail= (fil+en+dep)*num(s.fail)/100;
+  const fail= (fil+en)*num(s.fail)/100;
   const laborMin = p.laborMin===''||p.laborMin==null ? num(s.laborMin) : num(p.laborMin);
   const labor = laborMin/60*num(s.laborRate);
   const pack = p.pack===''||p.pack==null ? num(s.pack) : num(p.pack);
@@ -264,7 +263,6 @@ function costOf(p, s=S, mode){
   const parts = [
     ['Filamento', fil/n, 'var(--cat-teal)'],
     ['Energia', en/n, 'var(--cat-gold)'],
-    ['Desgaste e manutenção', dep/n, 'var(--cat-blue)'],
     ['Falhas ('+num(s.fail)+'%)', fail/n, 'var(--muted)'],
     ['Mão de obra ('+laborMin+' min)', labor, 'var(--cat-plum)'],
     ['Embalagem', pack, 'var(--cat-green)'],
@@ -760,8 +758,6 @@ function renderSettings(){
     '<div class="sect">Filamento e impressora</div>'+
     sf('filPrice','Preço do filamento',{pre:'R$',suf:'/kg',step:'0.01'})+sf('fail','Taxa de falha',{suf:'%',step:'1'})+
     sf('watts','Consumo médio da impressora',{suf:'W',step:'1',note:'A1 ~95 · P1S ~130 · X1C ~145 · H2D ~200'})+sf('kwh','Tarifa de energia',{pre:'R$',suf:'/kWh',step:'0.01'})+
-    sf('printerPrice','Valor da impressora',{pre:'R$',step:'10'})+sf('lifeH','Vida útil',{suf:'h',step:'100'})+
-    sf('maint','Manutenção',{pre:'R$',suf:'/h',step:'0.05'})+
     '<div class="sect">Por peça</div>'+
     sf('laborMin','Acabamento e embalagem',{suf:'min',step:'1'})+sf('laborRate','Sua hora de trabalho',{pre:'R$',suf:'/h',step:'1'})+
     sf('pack','Embalagem',{pre:'R$',step:'0.1'})+
