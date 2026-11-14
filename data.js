@@ -1,5 +1,5 @@
 window.CATALOGO = {
-    "updated":  "2026-11-13",
+    "updated":  "2026-11-14",
     "catalogs":  [
                      {
                          "id":  "natal",
@@ -184,46 +184,6 @@ window.CATALOGO = {
                                     ],
                          "id":  "natal-boneco-de-neve",
                          "image":  "img/natal-boneco-de-neve.webp"
-                     },
-                     {
-                         "adTitle":  "Cadeira Trono Para Mini Jesus Impressa 3d Miniatura",
-                         "catalogId":  "natal",
-                         "colorText":  "marrom madeira",
-                         "colors":  [
-                                        "#6F5034"
-                                    ],
-                         "createdAt":  1794333500002,
-                         "description":  "Cadeira em estilo trono, do tamanho certo para o Mini Jesus sentar. Combina com o Mini Jesus sentado da mesma coleção e fica linda em presépio, nicho ou mesa.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanho: cerca de 5,6 cm de altura\n- Cor: marrom madeira (outras cores sob consulta)\n- O Mini Jesus é vendido separadamente\n\nPRAZO\nProdução em até 3 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
-                         "designer":  "Biexfn",
-                         "dims":  [
-                                      56.4,
-                                      16.7,
-                                      56.4
-                                  ],
-                         "example":  false,
-                         "extras":  0,
-                         "grams":  7.1,
-                         "kind":  "exact",
-                         "laborMin":  5,
-                         "margin":  "",
-                         "material":  "PLA",
-                         "minutes":  35,
-                         "name":  "Cadeira trono para Mini Jesus",
-                         "pack":  1,
-                         "pieces":  1,
-                         "plates":  [
-                                        {
-                                            "copies":  8,
-                                            "fit":  8,
-                                            "g":  7.08,
-                                            "idx":  "1",
-                                            "sec":  2110,
-                                            "sharedG":  0,
-                                            "sharedSec":  427
-                                        }
-                                    ],
-                         "id":  "natal-cadeira-mini-jesus",
-                         "image":  "img/natal-cadeira-mini-jesus.webp"
                      },
                      {
                          "adTitle":  "Calendário Do Advento Lareira Natal Impresso 3d 24 Dias",
@@ -774,51 +734,6 @@ window.CATALOGO = {
     "id":  "natal-kit-completo",
     "image":  "img/natal-kit-completo.jpg"
 },
-                     {
-                         "adTitle":  "Mini Jesus Sentado Impresso 3d Enfeite Monitor Prateleira",
-                         "catalogId":  "natal",
-                         "colorText":  "branco, marrom, pele e preto",
-                         "colors":  [
-                                        "#FFFFFF",
-                                        "#6F5034",
-                                        "#FFCC99",
-                                        "#000000"
-                                    ],
-                         "createdAt":  1794333500001,
-                         "description":  "Mini Jesus sentado, feito para ficar na borda do monitor, da prateleira ou do nicho. Um enfeite delicado que vira conversa no escritório e é ótimo para lembrancinha.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanho: cerca de 4 cm de altura\n- Cores: branco, marrom, pele e preto (cores reais do filamento, sem pintura)\n- Peça única, sem montagem\n\nPRAZO\nProdução em até 3 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas. Contém peça pequena, não indicado para menores de 3 anos.",
-                         "designer":  "shredderrich",
-                         "dims":  [
-                                      16.7,
-                                      17.1,
-                                      37
-                                  ],
-                         "example":  false,
-                         "extras":  0,
-                         "filPrice":  90,
-                         "grams":  31.7,
-                         "kind":  "exact",
-                         "laborMin":  5,
-                         "margin":  "",
-                         "material":  "PLA",
-                         "minutes":  145,
-                         "name":  "Mini Jesus sentado (monitor ou prateleira)",
-                         "pack":  1,
-                         "pieces":  1,
-                         "plates":  [
-                                        {
-                                            "copies":  10,
-                                            "fit":  10,
-                                            "g":  31.72,
-                                            "idx":  "1",
-                                            "sec":  8684,
-                                            "sharedG":  28,
-                                            "sharedSec":  5804
-                                        }
-                                    ],
-                         "updatedAt":  1794445510287,
-                         "id":  "natal-mini-jesus-sentado",
-                         "image":  "img/natal-mini-jesus-sentado.webp"
-                     },
                      {
                          "adTitle":  "Nossa Senhora Porta Terço Impressa 3d Decoração",
                          "catalogId":  "natal",

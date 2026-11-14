@@ -12,7 +12,7 @@
 <meta property="og:image" content="https://tteuzz.github.io/catalogo-3d/img/natal-kit-completo.jpg">
 <meta property="og:locale" content="pt_BR">
 <meta name="twitter:card" content="summary_large_image">
-<script src="data.js?v=17"></script>
+<script src="data.js?v=18"></script>
 
 <meta name="theme-color" content="#0E6E64">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -79,6 +79,25 @@ select.sel{font:inherit;font-size:15px;padding:8px 10px;border:1px solid var(--l
 @media (prefers-color-scheme: dark){.badge{color:#1B1405}}
 .badge.kit{background:var(--accent);color:var(--accent-ink)}
 .badge.save{top:auto;bottom:8px}
+.badge.star{left:auto;right:8px}
+@media (max-width:480px){.badge.star{top:36px;left:8px;right:auto}}
+.feat{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:20px;align-items:center;background:color-mix(in srgb,var(--gold) 8%,var(--surface));border:2px solid color-mix(in srgb,var(--gold) 55%,var(--line));border-radius:14px;padding:14px}
+@media (max-width:720px){.feat{grid-template-columns:minmax(0,1fr);gap:12px}.feat-img .thumb{aspect-ratio:4/3}}
+.feat-img{all:unset;cursor:pointer;display:block;min-width:0}
+.feat-img:focus-visible{outline:3px solid color-mix(in srgb,var(--accent) 45%,transparent);outline-offset:2px;border-radius:10px}
+.feat-img .thumb{border-radius:10px;border:1px solid var(--line)}
+.feat-info{display:flex;flex-direction:column;gap:10px;min-width:0}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.feat-name{font-family:var(--f-display);font-weight:800;font-size:clamp(20px,2.6vw,28px);line-height:1.12;letter-spacing:-.015em;margin:0;text-wrap:balance}
+.feat-parts{margin:0;color:var(--muted);font-size:14px}
+.feat-price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.feat-price b{font-family:var(--f-display);font-weight:800;font-size:32px;line-height:1;color:var(--accent);font-variant-numeric:tabular-nums}
+.feat-price .was{font-size:15px;margin:0}
+.feat-save{font-size:13px;font-weight:700;color:#fff;background:var(--gold);border-radius:999px;padding:3px 10px}
+@media (prefers-color-scheme: dark){.feat-save{color:#1B1405}}
+.feat-actions{display:flex;gap:8px;flex-wrap:wrap}
+.feat-actions .btn{min-height:44px}
+.feat-actions .stepper{flex:0 0 132px;min-height:44px}
 .card-body{padding:10px 12px 10px;display:flex;flex-direction:column;gap:6px;min-width:0;flex:1}
 .card-name{font-weight:600;font-size:14.5px;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .swatches{display:flex;gap:3px;flex-wrap:wrap}
@@ -173,6 +192,7 @@ label.fl input,label.fl textarea{font:inherit;font-size:16px;font-weight:400;col
     <a class="btn wa" id="waTop" target="_blank" rel="noopener"></a>
   </header>
   <section class="how" id="how" aria-label="Como funciona"></section>
+  <section class="feat" id="feat" aria-label="Produto em destaque" hidden></section>
   <nav class="filters" id="filters" aria-label="Filtros"></nav>
   <div class="toolbar">
     <input class="search" id="q" type="search" placeholder="Buscar produto" aria-label="Buscar produto">
@@ -297,8 +317,29 @@ function bindSteppers(root){
   root.querySelectorAll('[data-add]').forEach(b=>b.onclick=e=>{ e.stopPropagation(); setQty(b.dataset.add,qtyOf(b.dataset.add)+1); toast('Adicionado ao pedido'); });
 }
 
+/* destaque (fica no topo e é o primeiro da lista) */
+const FEATURED='natal-kit-bandeja';
+function renderFeat(){
+  const p=byId(FEATURED), el=$('feat');
+  const show=!!p && !$('q').value.trim() && kind!=='piece' && (active==='all'||p.catalogId===active);
+  el.hidden=!show; if(!show){ el.innerHTML=''; return; }
+  const v=priceOf(p), sv=kitSave(p), sep=kitSeparate(p), q=qtyOf(p.id), parts=kitParts(p);
+  el.innerHTML='<button class="feat-img" type="button" data-open="'+esc(p.id)+'" aria-label="Ver '+esc(p.name)+'"><div class="thumb">'+img(p)+(parts.length?'<span class="badge kit">Kit · '+parts.length+' peças</span>':'')+'</div></button>'+
+    '<div class="feat-info"><span class="eyebrow">★ Destaque de Natal</span>'+
+      '<h2 class="feat-name">'+esc(p.name)+'</h2>'+
+      (parts.length?'<p class="feat-parts">Inclui: '+parts.map(x=>esc(x.name)).join(' · ')+'</p>':'')+
+      '<div class="feat-price">'+(sv?'<s class="was">'+BRL(sep)+'</s>':'')+'<b>'+(v?BRL(v):'Consulte')+'</b>'+(sv?'<span class="feat-save">Economize '+BRL(sv)+'</span>':'')+'</div>'+
+      '<div class="feat-actions">'+(q?stepper(p.id,q,p.name):'<button class="btn" type="button" data-add="'+esc(p.id)+'">Adicionar ao pedido</button>')+
+        '<a class="btn wa" href="'+esc(waLink(oneText(p,q||1)))+'" target="_blank" rel="noopener">'+WA_SVG+'Pedir pelo WhatsApp</a>'+
+        '<button class="btn plain" type="button" data-open="'+esc(p.id)+'">Ver detalhes</button></div>'+
+    '</div>';
+  el.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>go(b.dataset.open));
+  bindSteppers(el);
+}
+
 /* lista */
 function render(){
+  renderFeat();
   const inCat=p=>active==='all'||p.catalogId===active;
   const kits=D.products.filter(p=>inCat(p)&&isKit(p)).length, pieces=D.products.filter(p=>inCat(p)&&!isKit(p)).length;
   const count=id=>D.products.filter(p=>id==='all'||p.catalogId===id).length;
@@ -310,13 +351,13 @@ function render(){
   const q=$('q').value.trim().toLowerCase(), s=$('sort').value;
   const norm=t=>t.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
   let list=D.products.filter(p=>inCat(p)&&(kind==='all'||(kind==='kit')===isKit(p))&&(!q||norm(p.name+' '+(p.description||'')+' '+(p.colorText||'')).includes(norm(q))));
-  list.sort((a,b)=>s==='price'?priceOf(a)-priceOf(b):s==='priceDesc'?priceOf(b)-priceOf(a):a.name.localeCompare(b.name,'pt-BR'));
+  list.sort((a,b)=>s==='price'?priceOf(a)-priceOf(b):s==='priceDesc'?priceOf(b)-priceOf(a):((b.id===FEATURED)-(a.id===FEATURED))||a.name.localeCompare(b.name,'pt-BR'));
   if(!list.length){ $('grid').innerHTML='<div class="empty">Nenhum produto encontrado. <button class="btn ghost" type="button" id="clearQ">Limpar busca</button></div>'; const c=$('clearQ'); if(c) c.onclick=()=>{ $('q').value=''; kind='all'; render(); }; return; }
   $('grid').innerHTML=list.map(p=>{
     const v=priceOf(p), sv=kitSave(p), q=qtyOf(p.id), r=REV?resale(p).find(x=>!x.bad):null;
     return '<article class="card">'+
       '<button class="card-open" type="button" data-open="'+esc(p.id)+'" aria-label="Ver '+esc(p.name)+'">'+
-        '<div class="thumb">'+img(p,true,true)+(isKit(p)?'<span class="badge kit">Kit · '+kitParts(p).length+' peças</span>':'')+(sv?'<span class="badge save">Economize '+BRL(sv)+'</span>':'')+'</div>'+
+        '<div class="thumb">'+img(p,true,true)+(isKit(p)?'<span class="badge kit">Kit · '+kitParts(p).length+' peças</span>':'')+(sv?'<span class="badge save">Economize '+BRL(sv)+'</span>':'')+(p.id===FEATURED?'<span class="badge star">★ Destaque</span>':'')+'</div>'+
         '<div class="card-body"><div class="card-name">'+esc(p.name)+'</div>'+swatches(p)+
           '<div class="card-prices'+(REV?'':' one')+'"><div class="main"><small>'+T.price+'</small><b>'+(v?BRL(v):'Consulte')+'</b></div>'+
           (REV?'<div><small>Revenda no ML</small><b>'+(r?BRL(r.price):'—')+'</b></div>':'')+'</div></div>'+
