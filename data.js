@@ -1225,12 +1225,10 @@ window.CATALOGO = {
 {
     "adTitle":  "Quebra Nozes Minimalista Natal Impresso 3d Decoracao 21cm",
     "catalogId":  "natal",
-    "colorText":  "vermelho",
-    "colors":  [
-                   "#9D2235"
-               ],
+    "colorText":  "branco, vermelho, verde, bege ou marrom",
+    "colors":  ["#FFFFFF", "#9D2235", "#5E7F68", "#E4D3B5", "#6F5034"],
     "createdAt":  1794860005000,
-    "description":  "Soldadinho quebra-nozes em estilo minimalista japandi, um clássico do Natal com visual moderno. Enviado montado.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanho: cerca de 21 cm de altura, montado\n- Cores reais do filamento, sem pintura\n- Cores: vermelho, verde ou bege\n- Peça decorativa (não quebra nozes de verdade)\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Soldadinho quebra-nozes em estilo japandi, um clássico do Natal com visual moderno. Escolha o modelo minimalista (liso) ou o ripado. Enviado montado.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanho: cerca de 21 cm de altura, montado\n- Cores reais do filamento, sem pintura\n- Modelos: minimalista (liso) ou ripado\n- Cores: branco, vermelho, verde, bege ou marrom\n- Peça decorativa (não quebra nozes de verdade)\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "designer":  "SabreDesign",
     "dims":  null,
     "example":  false,
@@ -1242,7 +1240,7 @@ window.CATALOGO = {
     "margin":  "",
     "material":  "PLA",
     "minutes":  130,
-    "name":  "Quebra-nozes minimalista",
+    "name":  "Quebra-nozes de Natal",
     "pack":  1,
     "pieces":  1,
     "source":  "https://makerworld.com/pt/models/1932060",
