@@ -79,12 +79,12 @@ window.CATALOGO = {
                      {
                          "adTitle":  "Bandeja Decorativa Natal Impressa 3d Para Enfeites",
                          "catalogId":  "natal",
-                         "colorText":  "preto, dourado, branco ou vermelho",
+                         "colorText":  "preto, branco ou vermelho",
                          "colors":  [
                                         "#000000"
                                     ],
                          "createdAt":  1794332000010,
-                         "description":  "Bandeja decorativa com borda ondulada, perfeita para montar uma mesinha de Natal com enfeites, velas ou doces embalados.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanho: cerca de 20 x 20 cm, 1 cm de altura\n- Cores: preto, dourado, branco ou vermelho\n- Peça única, sem montagem\n\nPRAZO\nProdução em até 3 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nNão indicada para contato direto com alimentos. Peça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+                         "description":  "Bandeja decorativa com borda ondulada, perfeita para montar uma mesinha de Natal com enfeites, velas ou doces embalados.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanho: cerca de 20 x 20 cm, 1 cm de altura\n- Cores: preto, branco ou vermelho\n- Peça única, sem montagem\n\nPRAZO\nProdução em até 3 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nNão indicada para contato direto com alimentos. Peça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
                          "designer":  "Prin3DLab",
                          "dims":  [
                                       203.6,
@@ -115,7 +115,7 @@ window.CATALOGO = {
                                         }
                                     ],
                          "id":  "natal-bandeja",
-    "options":  [{"name":"Cor","choices":[{"id":"preto","label":"Preto","hex":"#1A1A1A"},{"id":"dourado","label":"Dourado","hex":"#C9A227"},{"id":"branco","label":"Branco","hex":"#FFFFFF"},{"id":"vermelho","label":"Vermelho","hex":"#9D2235"}]}],
+    "options":  [{"name":"Cor","choices":[{"id":"preto","label":"Preto","hex":"#1A1A1A"},{"id":"branco","label":"Branco","hex":"#FFFFFF"},{"id":"vermelho","label":"Vermelho","hex":"#9D2235"}]}],
     "image":  "img/natal-bandeja.jpg"
                      },
                      {
@@ -1253,13 +1253,10 @@ window.CATALOGO = {
 {
     "adTitle":  "Casinha De Natal Decorada Impressa 3d Boneco De Neve Arvore",
     "catalogId":  "natal",
-    "colorText":  "azul e branco",
-    "colors":  [
-                   "#1F3A93",
-                   "#FFFFFF"
-               ],
+    "colorText":  "vermelho ou marrom, com detalhes em branco",
+    "colors":  ["#9D2235", "#6F5034", "#FFFFFF"],
     "createdAt":  1794860006000,
-    "description":  "Casinha de Natal com detalhes em relevo: coração na fachada, árvore, flocos de neve e boneco de neve. Linda para mesa ou prateleira.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Cores: azul, vermelho ou marrom, com detalhes em branco\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Casinha de Natal com detalhes em relevo: coração na fachada, árvore, flocos de neve e boneco de neve. Linda para mesa ou prateleira.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Cores: vermelho ou marrom, com detalhes em branco\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "designer":  "Savio",
     "dims":  null,
     "example":  false,
@@ -1277,7 +1274,7 @@ window.CATALOGO = {
     "source":  "https://makerworld.com/pt/models/3465929",
     "id":  "natal-casinha-card",
     "gallery":  ["img/natal-casinha-card-g1.jpg", "img/natal-casinha-card-g2.jpg", "img/natal-casinha-card-g3.jpg", "img/natal-casinha-card-g4.jpg", "img/natal-casinha-card-g5.jpg", "img/natal-casinha-card-g6.jpg"],
-    "options":  [{"name":"Cor","choices":[{"id":"azul","label":"Azul","hex":"#2F5D8C"},{"id":"vermelho","label":"Vermelho","hex":"#9D2235"},{"id":"marrom","label":"Marrom","hex":"#6F5034"}]}],
+    "options":  [{"name":"Cor","choices":[{"id":"vermelho","label":"Vermelho","hex":"#9D2235"},{"id":"marrom","label":"Marrom","hex":"#6F5034"}]}],
     "image":  "img/natal-casinha-card.jpg"
 },
 {
@@ -1430,7 +1427,7 @@ window.CATALOGO = {
                    "#3F6B48"
                ],
     "createdAt":  1794860012000,
-    "description":  "Árvore de Natal minimalista com nervuras finas e três níveis, inspirada na decoração japandi. Linda sozinha ou em trio de cores.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanho: cerca de 15 cm de altura\n- Cores reais do filamento, sem pintura\n- Cores: verde, branco ou terracota\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Árvore de Natal minimalista com nervuras finas e três níveis, inspirada na decoração japandi. Linda sozinha ou em trio de cores.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanho: cerca de 15 cm de altura\n- Cores reais do filamento, sem pintura\n- Cores: verde ou branco\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "designer":  "CaneForge Studio",
     "dims":  null,
     "example":  false,
@@ -1448,7 +1445,7 @@ window.CATALOGO = {
     "source":  "https://makerworld.com/pt/models/3454676",
     "id":  "natal-arvore-japandi",
     "gallery":  ["img/natal-arvore-japandi-g1.jpg", "img/natal-arvore-japandi-g2.jpg", "img/natal-arvore-japandi-g3.jpg"],
-    "options":  [{"name":"Cor","choices":[{"id":"verde","label":"Verde","hex":"#5E7F68"},{"id":"branco","label":"Branco","hex":"#FFFFFF"},{"id":"terracota","label":"Terracota","hex":"#C0623B"}]}],
+    "options":  [{"name":"Cor","choices":[{"id":"verde","label":"Verde","hex":"#5E7F68"},{"id":"branco","label":"Branco","hex":"#FFFFFF"}]}],
     "image":  "img/natal-arvore-japandi.jpg"
 },
 {
@@ -1489,7 +1486,7 @@ window.CATALOGO = {
                    "#68724D"
                ],
     "createdAt":  1794860014000,
-    "description":  "Sino de Natal moderno com textura canelada e badalo por dentro: ele toca de verdade quando balança. Enfeite lindo para a árvore.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Toca ao balançar\n- Cores: verde, bege ou vinho\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Sino de Natal moderno com textura canelada e badalo por dentro: ele toca de verdade quando balança. Enfeite lindo para a árvore.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Toca ao balançar\n- Cores: verde, bege ou vermelho\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "designer":  "SabreDesign",
     "dims":  null,
     "example":  false,
@@ -1507,7 +1504,7 @@ window.CATALOGO = {
     "source":  "https://makerworld.com/pt/models/2091857",
     "id":  "natal-sino",
     "gallery":  ["img/natal-sino-g1.jpg", "img/natal-sino-g2.jpg", "img/natal-sino-g3.jpg", "img/natal-sino-g4.jpg"],
-    "options":  [{"name":"Cor","choices":[{"id":"verde","label":"Verde","hex":"#5E7F68"},{"id":"bege","label":"Bege","hex":"#E4D3B5"},{"id":"vinho","label":"Vinho","hex":"#6B1E2E"}]}],
+    "options":  [{"name":"Cor","choices":[{"id":"verde","label":"Verde","hex":"#5E7F68"},{"id":"bege","label":"Bege","hex":"#E4D3B5"},{"id":"vermelho","label":"Vermelho","hex":"#9D2235"}]}],
     "image":  "img/natal-sino.jpg"
 },
 {
