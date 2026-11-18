@@ -115,6 +115,7 @@ window.CATALOGO = {
                                         }
                                     ],
                          "id":  "natal-bandeja",
+    "options":  [{"name":"Cor","choices":[{"id":"preto","label":"Preto","hex":"#1A1A1A"},{"id":"dourado","label":"Dourado","hex":"#C9A227"},{"id":"branco","label":"Branco","hex":"#FFFFFF"},{"id":"vermelho","label":"Vermelho","hex":"#9D2235"}]}],
     "image":  "img/natal-bandeja.jpg"
                      },
                      {
@@ -1246,6 +1247,7 @@ window.CATALOGO = {
     "source":  "https://makerworld.com/pt/models/1932060",
     "id":  "natal-quebra-nozes",
     "gallery":  ["img/natal-quebra-nozes-g1.jpg", "img/natal-quebra-nozes-g2.jpg", "img/natal-quebra-nozes-g3.jpg", "img/natal-quebra-nozes-g4.jpg", "img/natal-quebra-nozes-g5.jpg"],
+    "options":  [{"name":"Modelo","priced":true,"choices":[{"id":"liso","label":"Minimalista (liso)"},{"id":"ripado","label":"Ripado"}]},{"name":"Cor","choices":[{"id":"branco","label":"Branco","hex":"#FFFFFF"},{"id":"vermelho","label":"Vermelho","hex":"#9D2235"},{"id":"verde","label":"Verde","hex":"#5E7F68"},{"id":"bege","label":"Bege","hex":"#E4D3B5"},{"id":"marrom","label":"Marrom","hex":"#6F5034"}]}],
     "image":  "img/natal-quebra-nozes.jpg"
 },
 {
@@ -1275,6 +1277,7 @@ window.CATALOGO = {
     "source":  "https://makerworld.com/pt/models/3465929",
     "id":  "natal-casinha-card",
     "gallery":  ["img/natal-casinha-card-g1.jpg", "img/natal-casinha-card-g2.jpg", "img/natal-casinha-card-g3.jpg", "img/natal-casinha-card-g4.jpg", "img/natal-casinha-card-g5.jpg", "img/natal-casinha-card-g6.jpg"],
+    "options":  [{"name":"Cor","choices":[{"id":"azul","label":"Azul","hex":"#2F5D8C"},{"id":"vermelho","label":"Vermelho","hex":"#9D2235"},{"id":"marrom","label":"Marrom","hex":"#6F5034"}]}],
     "image":  "img/natal-casinha-card.jpg"
 },
 {
@@ -1360,17 +1363,16 @@ window.CATALOGO = {
     "source":  "https://makerworld.com/pt/models/2419531",
     "id":  "natal-bandeja-japandi",
     "gallery":  ["img/natal-bandeja-japandi-g1.jpg", "img/natal-bandeja-japandi-g2.jpg", "img/natal-bandeja-japandi-g3.jpg"],
+    "options":  [{"name":"Cor","choices":[{"id":"bege","label":"Bege","hex":"#E4D3B5"},{"id":"preto","label":"Preto","hex":"#1A1A1A"},{"id":"branco","label":"Branco","hex":"#FFFFFF"}]}],
     "image":  "img/natal-bandeja-japandi.jpg"
 },
 {
     "adTitle":  "Rena De Natal Elegante Geometrica Impressa 3d Decoracao",
     "catalogId":  "natal",
-    "colorText":  "marfim",
-    "colors":  [
-                   "#F2EFE6"
-               ],
+    "colorText":  "branco",
+    "colors":  ["#FFFFFF"],
     "createdAt":  1794860010000,
-    "description":  "Rena de Natal em design geométrico moderno, com chifres altos e elegantes. Peça de destaque para aparadores e mesas de Natal.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanho: cerca de 17,5 cm de altura\n- Cores reais do filamento, sem pintura\n- Cores: marfim, dourado ou branco\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Rena de Natal em design geométrico moderno, com chifres altos e elegantes. Peça de destaque para aparadores e mesas de Natal.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanhos: grande (cerca de 17,5 cm) ou pequena (cerca de 14 cm)\n- Cores reais do filamento, sem pintura\n- Cor: branco\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "designer":  "RobsonPrinter",
     "dims":  null,
     "example":  false,
@@ -1388,33 +1390,8 @@ window.CATALOGO = {
     "source":  "https://makerworld.com/pt/models/3388512",
     "id":  "natal-rena-elegante",
     "gallery":  ["img/natal-rena-elegante-g1.jpg", "img/natal-rena-elegante-g2.jpg", "img/natal-rena-elegante-g3.jpg", "img/natal-rena-elegante-g4.jpg", "img/natal-rena-elegante-g5.jpg", "img/natal-rena-elegante-g6.jpg"],
+    "options":  [{"name":"Tamanho","priced":true,"choices":[{"id":"g","label":"Grande (17,5 cm)"},{"id":"p","label":"Pequena (14 cm)"}]}],
     "image":  "img/natal-rena-elegante.jpg"
-},
-{
-    "adTitle":  "Rena De Natal Elegante Geometrica 14cm Impressa 3d Decoracao",
-    "catalogId":  "natal",
-    "colorText":  "marfim",
-    "colors":  ["#F2EFE6"],
-    "createdAt":  1795046400000,
-    "description":  "Rena de Natal em design geométrico moderno, com chifres altos e elegantes. Versão menor, ótima para mesas e nichos ou para fazer par com a rena grande.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanho: cerca de 14 cm de altura\n- Cores reais do filamento, sem pintura\n- Cores: marfim, dourado ou branco\n\nPRAZO\nProdução em até 3 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
-    "designer":  "RobsonPrinter",
-    "dims":  null,
-    "example":  false,
-    "extras":  0,
-    "filPrice":  "",
-    "grams":  31.3,
-    "kind":  "exact",
-    "laborMin":  0,
-    "margin":  "",
-    "material":  "PLA",
-    "minutes":  137,
-    "name":  "Rena elegante geométrica pequena",
-    "pack":  1,
-    "pieces":  1,
-    "source":  "",
-    "id":  "natal-rena-elegante-pequena",
-    "gallery":  ["img/natal-rena-elegante-pequena-g1.jpg", "img/natal-rena-elegante-pequena-g2.jpg", "img/natal-rena-elegante-pequena-g3.jpg"],
-    "image":  "img/natal-rena-elegante-pequena.jpg"
 },
 {
     "adTitle":  "Alce De Natal Efeito Trico Com Cachecol Impresso 3d",
@@ -1442,6 +1419,7 @@ window.CATALOGO = {
     "source":  "https://makerworld.com/pt/models/3427812",
     "id":  "natal-alce-trico",
     "gallery":  ["img/natal-alce-trico-g1.jpg", "img/natal-alce-trico-g2.jpg", "img/natal-alce-trico-g3.jpg"],
+    "options":  [{"name":"Cor","choices":[{"id":"marrom","label":"Marrom","hex":"#6F5034"},{"id":"verde","label":"Verde","hex":"#3F7D55"},{"id":"branco","label":"Branco","hex":"#FFFFFF"}]}],
     "image":  "img/natal-alce-trico.jpg"
 },
 {
@@ -1470,6 +1448,7 @@ window.CATALOGO = {
     "source":  "https://makerworld.com/pt/models/3454676",
     "id":  "natal-arvore-japandi",
     "gallery":  ["img/natal-arvore-japandi-g1.jpg", "img/natal-arvore-japandi-g2.jpg", "img/natal-arvore-japandi-g3.jpg"],
+    "options":  [{"name":"Cor","choices":[{"id":"verde","label":"Verde","hex":"#5E7F68"},{"id":"branco","label":"Branco","hex":"#FFFFFF"},{"id":"terracota","label":"Terracota","hex":"#C0623B"}]}],
     "image":  "img/natal-arvore-japandi.jpg"
 },
 {
@@ -1528,6 +1507,7 @@ window.CATALOGO = {
     "source":  "https://makerworld.com/pt/models/2091857",
     "id":  "natal-sino",
     "gallery":  ["img/natal-sino-g1.jpg", "img/natal-sino-g2.jpg", "img/natal-sino-g3.jpg", "img/natal-sino-g4.jpg"],
+    "options":  [{"name":"Cor","choices":[{"id":"verde","label":"Verde","hex":"#5E7F68"},{"id":"bege","label":"Bege","hex":"#E4D3B5"},{"id":"vinho","label":"Vinho","hex":"#6B1E2E"}]}],
     "image":  "img/natal-sino.jpg"
 },
 {
@@ -1556,6 +1536,7 @@ window.CATALOGO = {
     "source":  "https://makerworld.com/pt/models/2134302",
     "id":  "natal-tigela-arvore",
     "gallery":  ["img/natal-tigela-arvore-g1.jpg", "img/natal-tigela-arvore-g2.jpg", "img/natal-tigela-arvore-g3.jpg"],
+    "options":  [{"name":"Cor","choices":[{"id":"vermelho","label":"Vermelho","hex":"#9D2235"},{"id":"verde","label":"Verde","hex":"#3F7D55"}]}],
     "image":  "img/natal-tigela-arvore.jpg"
 },
 {
@@ -1567,7 +1548,7 @@ window.CATALOGO = {
                    "#E4BD68"
                ],
     "createdAt":  1794860016000,
-    "description":  "Anjo minimalista com corpo em malha vazada e auréola dourada. Com uma vela de LED dentro, projeta sombras lindas na mesa e na parede.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanho: cerca de 18,5 cm de altura\n- Cores reais do filamento, sem pintura\n- Acompanha vela de LED tipo réchaud (já inclusa no pedido)\n- Use apenas vela de LED, não use vela com chama\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Anjo minimalista com corpo em malha vazada e auréola dourada. Com uma vela de LED dentro, projeta sombras lindas na mesa e na parede.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanhos: médio (cerca de 18,5 cm) ou pequeno (cerca de 14,5 cm)\n- Cores reais do filamento, sem pintura\n- Acompanha vela de LED tipo réchaud (já inclusa no pedido)\n- Use apenas vela de LED, não use vela com chama\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "designer":  "Maxx Design",
     "dims":  null,
     "example":  false,
@@ -1585,6 +1566,7 @@ window.CATALOGO = {
     "source":  "https://makerworld.com/pt/models/860364",
     "id":  "natal-anjo-vela",
     "gallery":  ["img/natal-anjo-vela-g1.jpg", "img/natal-anjo-vela-g2.jpg", "img/natal-anjo-vela-g3.jpg", "img/natal-anjo-vela-g4.jpg"],
+    "options":  [{"name":"Tamanho","priced":true,"choices":[{"id":"medio","label":"Médio (18,5 cm)"},{"id":"pequeno","label":"Pequeno (14,5 cm)"}]}],
     "image":  "img/natal-anjo-vela.jpg"
 },
 {
