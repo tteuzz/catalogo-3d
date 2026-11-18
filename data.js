@@ -73,7 +73,8 @@ window.CATALOGO = {
                                     ],
                          "updatedAt":  1794443828690,
                          "id":  "natal-arvore-minimalista",
-                         "image":  "img/natal-arvore-minimalista.webp"
+    "gallery":  ["img/natal-arvore-minimalista-g1.jpg", "img/natal-arvore-minimalista-g2.jpg", "img/natal-arvore-minimalista-g3.jpg"],
+    "image":  "img/natal-arvore-minimalista.webp"
                      },
                      {
                          "adTitle":  "Bandeja Decorativa Natal Impressa 3d Para Enfeites",
@@ -114,7 +115,7 @@ window.CATALOGO = {
                                         }
                                     ],
                          "id":  "natal-bandeja",
-                         "image":  "img/natal-bandeja.jpg"
+    "image":  "img/natal-bandeja.jpg"
                      },
                      {
                          "adTitle":  "Boneco De Neve Tricô Impresso 3d Enfeite De Natal",
@@ -180,7 +181,8 @@ window.CATALOGO = {
                                         }
                                     ],
                          "id":  "natal-boneco-de-neve",
-                         "image":  "img/natal-boneco-de-neve.webp"
+    "gallery":  ["img/natal-boneco-de-neve-g1.jpg", "img/natal-boneco-de-neve-g2.jpg", "img/natal-boneco-de-neve-g3.jpg", "img/natal-boneco-de-neve-g4.jpg"],
+    "image":  "img/natal-boneco-de-neve.webp"
                      },
                      {
                          "adTitle":  "Calendário Do Advento Lareira Natal Impresso 3d 24 Dias",
@@ -294,7 +296,8 @@ window.CATALOGO = {
                                         }
                                     ],
                          "id":  "natal-calendario-lareira",
-                         "image":  "img/natal-calendario-lareira.webp"
+    "gallery":  ["img/natal-calendario-lareira-g1.jpg", "img/natal-calendario-lareira-g2.jpg", "img/natal-calendario-lareira-g3.jpg", "img/natal-calendario-lareira-g4.jpg", "img/natal-calendario-lareira-g5.jpg"],
+    "image":  "img/natal-calendario-lareira.webp"
                      },
                      {
                          "adTitle":  "Jesus Efeito Tricô Impresso 3d Enfeite Religioso Natal",
@@ -351,7 +354,8 @@ window.CATALOGO = {
                                         }
                                     ],
                          "id":  "natal-jesus-trico",
-                         "image":  "img/natal-jesus-trico.webp"
+    "gallery":  ["img/natal-jesus-trico-g1.jpg", "img/natal-jesus-trico-g2.jpg", "img/natal-jesus-trico-g3.jpg", "img/natal-jesus-trico-g4.jpg"],
+    "image":  "img/natal-jesus-trico.webp"
                      },
                      {
                          "adTitle":  "Kit Decoração De Natal Impresso 3d Papai Noel Rena Árvore",
@@ -387,7 +391,7 @@ window.CATALOGO = {
                          "pack":  1,
                          "pieces":  1,
                          "id":  "natal-kit-bandeja",
-                         "image":  "img/natal-kit-bandeja.webp"
+    "image":  "img/natal-kit-bandeja.webp"
                      },
                      {
                          "adTitle":  "Kit Natal Impresso 3d Papai Noel Rena Árvore Placa Feliz Natal",
@@ -424,7 +428,7 @@ window.CATALOGO = {
                          "pack":  1,
                          "pieces":  1,
                          "id":  "natal-kit-bandeja-placa",
-                         "image":  "img/natal-kit-bandeja-placa.jpg"
+    "image":  "img/natal-kit-bandeja-placa.jpg"
                      },
 {
     "adTitle":  "Kit Natal Impresso 3d Papai Noel Urso Polar Árvore Bandeja",
@@ -769,7 +773,8 @@ window.CATALOGO = {
                                         }
                                     ],
                          "id":  "natal-nossa-senhora-terco",
-                         "image":  "img/natal-nossa-senhora-terco.webp"
+    "gallery":  ["img/natal-nossa-senhora-terco-g1.jpg", "img/natal-nossa-senhora-terco-g2.jpg", "img/natal-nossa-senhora-terco-g3.jpg", "img/natal-nossa-senhora-terco-g4.jpg", "img/natal-nossa-senhora-terco-g5.jpg", "img/natal-nossa-senhora-terco-g6.jpg"],
+    "image":  "img/natal-nossa-senhora-terco.webp"
                      },
                      {
                          "adTitle":  "Papai Noel Efeito Tricô Impresso 3d Enfeite De Natal",
@@ -836,7 +841,8 @@ window.CATALOGO = {
                                         }
                                     ],
                          "id":  "natal-papai-noel-trico",
-                         "image":  "img/natal-papai-noel-trico.webp"
+    "gallery":  ["img/natal-papai-noel-trico-g1.jpg", "img/natal-papai-noel-trico-g2.jpg", "img/natal-papai-noel-trico-g3.jpg", "img/natal-papai-noel-trico-g4.jpg"],
+    "image":  "img/natal-papai-noel-trico.webp"
                      },
                      {
                          "adTitle":  "Placa Feliz Natal Floco De Neve Impressa 3d Decoração",
@@ -876,7 +882,8 @@ window.CATALOGO = {
                                         }
                                     ],
                          "id":  "natal-placa-feliz-natal",
-                         "image":  "img/natal-placa-feliz-natal.webp"
+    "gallery":  ["img/natal-placa-feliz-natal-g1.jpg", "img/natal-placa-feliz-natal-g2.jpg", "img/natal-placa-feliz-natal-g3.jpg"],
+    "image":  "img/natal-placa-feliz-natal.webp"
                      },
                      {
                          "adTitle":  "Presépio Minimalista Sagrada Família Impresso 3d Natal",
@@ -916,7 +923,8 @@ window.CATALOGO = {
                                         }
                                     ],
                          "id":  "natal-presepio-minimalista",
-                         "image":  "img/natal-presepio-minimalista.webp"
+    "gallery":  ["img/natal-presepio-minimalista-g1.jpg", "img/natal-presepio-minimalista-g2.jpg", "img/natal-presepio-minimalista-g3.jpg"],
+    "image":  "img/natal-presepio-minimalista.webp"
                      },
                      {
                          "adTitle":  "Rena De Natal Efeito Tricô Impressa 3d Enfeite",
@@ -983,7 +991,8 @@ window.CATALOGO = {
                                         }
                                     ],
                          "id":  "natal-rena-trico",
-                         "image":  "img/natal-rena-trico.webp"
+    "gallery":  ["img/natal-rena-trico-g1.jpg", "img/natal-rena-trico-g2.jpg"],
+    "image":  "img/natal-rena-trico.webp"
                      },
                      {
                          "adTitle":  "Braço Monstro Verde Suporte De Parede Bola De Natal 3d",
@@ -1039,7 +1048,7 @@ window.CATALOGO = {
                                         }
                                     ],
                          "id":  "natal-suporte-parede-grinch",
-                         "image":  "img/natal-suporte-parede-grinch.webp"
+    "image":  "img/natal-suporte-parede-grinch.webp"
                      },
                      {
                          "adTitle":  "Urso Polar Com Gorro De Natal Tricô Impresso 3d Enfeite",
@@ -1095,7 +1104,8 @@ window.CATALOGO = {
                                         }
                                     ],
                          "id":  "natal-urso-polar",
-                         "image":  "img/natal-urso-polar.webp"
+    "gallery":  ["img/natal-urso-polar-g1.jpg", "img/natal-urso-polar-g2.jpg", "img/natal-urso-polar-g3.jpg", "img/natal-urso-polar-g4.jpg"],
+    "image":  "img/natal-urso-polar.webp"
                      },
 {
     "adTitle":  "Kit 4 Bolas De Natal Modernas Impressas 3d Enfeite Arvore",
@@ -1124,6 +1134,7 @@ window.CATALOGO = {
     "pieces":  1,
     "source":  "https://makerworld.com/pt/models/1960423",
     "id":  "natal-bolas-kit4",
+    "gallery":  ["img/natal-bolas-kit4-g1.jpg", "img/natal-bolas-kit4-g2.jpg", "img/natal-bolas-kit4-g3.jpg", "img/natal-bolas-kit4-g4.jpg", "img/natal-bolas-kit4-g5.jpg", "img/natal-bolas-kit4-g6.jpg"],
     "image":  "img/natal-bolas-kit4.jpg"
 },
 {
@@ -1151,6 +1162,7 @@ window.CATALOGO = {
     "pieces":  1,
     "source":  "https://makerworld.com/pt/models/3330025",
     "id":  "natal-presepio-decorativo",
+    "gallery":  ["img/natal-presepio-decorativo-g1.jpg", "img/natal-presepio-decorativo-g2.jpg", "img/natal-presepio-decorativo-g3.jpg", "img/natal-presepio-decorativo-g4.jpg", "img/natal-presepio-decorativo-g5.jpg", "img/natal-presepio-decorativo-g6.jpg"],
     "image":  "img/natal-presepio-decorativo.jpg"
 },
 {
@@ -1178,6 +1190,7 @@ window.CATALOGO = {
     "pieces":  1,
     "source":  "https://makerworld.com/pt/models/3338545",
     "id":  "natal-arvore-espiral",
+    "gallery":  ["img/natal-arvore-espiral-g1.jpg", "img/natal-arvore-espiral-g2.jpg", "img/natal-arvore-espiral-g3.jpg", "img/natal-arvore-espiral-g4.jpg", "img/natal-arvore-espiral-g5.jpg", "img/natal-arvore-espiral-g6.jpg"],
     "image":  "img/natal-arvore-espiral.jpg"
 },
 {
@@ -1188,11 +1201,11 @@ window.CATALOGO = {
                    "#FFFFFF"
                ],
     "createdAt":  1794860004000,
-    "description":  "Casinha de Natal com telhado de neve, porta e janelas vazadas. Com uma vela de LED dentro, as janelas acendem e criam um clima aconchegante.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Cabe uma vela de LED tipo réchaud (não inclusa)\n- Use apenas vela de LED, não use vela com chama\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Casinha de Natal com telhado de neve, porta e janelas vazadas. Com uma vela de LED dentro, as janelas acendem e criam um clima aconchegante.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Acompanha vela de LED tipo réchaud (já inclusa no pedido)\n- Use apenas vela de LED, não use vela com chama\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "designer":  "Hesic",
     "dims":  null,
     "example":  false,
-    "extras":  0,
+    "extras":  1.3,
     "filPrice":  "",
     "grams":  71,
     "kind":  "exact",
@@ -1205,6 +1218,7 @@ window.CATALOGO = {
     "pieces":  1,
     "source":  "https://makerworld.com/pt/models/3419125",
     "id":  "natal-casinha-vela",
+    "gallery":  ["img/natal-casinha-vela-g1.jpg", "img/natal-casinha-vela-g2.jpg", "img/natal-casinha-vela-g3.jpg", "img/natal-casinha-vela-g4.jpg", "img/natal-casinha-vela-g5.jpg"],
     "image":  "img/natal-casinha-vela.jpg"
 },
 {
@@ -1232,6 +1246,7 @@ window.CATALOGO = {
     "pieces":  1,
     "source":  "https://makerworld.com/pt/models/1932060",
     "id":  "natal-quebra-nozes",
+    "gallery":  ["img/natal-quebra-nozes-g1.jpg", "img/natal-quebra-nozes-g2.jpg", "img/natal-quebra-nozes-g3.jpg", "img/natal-quebra-nozes-g4.jpg", "img/natal-quebra-nozes-g5.jpg"],
     "image":  "img/natal-quebra-nozes.jpg"
 },
 {
@@ -1260,6 +1275,7 @@ window.CATALOGO = {
     "pieces":  1,
     "source":  "https://makerworld.com/pt/models/3465929",
     "id":  "natal-casinha-card",
+    "gallery":  ["img/natal-casinha-card-g1.jpg", "img/natal-casinha-card-g2.jpg", "img/natal-casinha-card-g3.jpg", "img/natal-casinha-card-g4.jpg", "img/natal-casinha-card-g5.jpg", "img/natal-casinha-card-g6.jpg"],
     "image":  "img/natal-casinha-card.jpg"
 },
 {
@@ -1270,11 +1286,11 @@ window.CATALOGO = {
                    "#F2EFE6"
                ],
     "createdAt":  1794860007000,
-    "description":  "Vila de Natal com casinhas e igrejinha, todas com janelas vazadas. Com velas de LED dentro, forma uma cena iluminada linda para a mesa de Natal.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Você escolhe de 3 a 12 casinhas (acima de 5, os modelos se repetem)\n- Cabem velas de LED tipo réchaud (não inclusas)\n- Use apenas vela de LED, não use vela com chama\n\nPRAZO\nProdução em até 7 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Vila de Natal com casinhas e igrejinha, todas com janelas vazadas. Com velas de LED dentro, forma uma cena iluminada linda para a mesa de Natal.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Cores reais do filamento, sem pintura\n- Você escolhe de 3 a 12 casinhas (acima de 5, os modelos se repetem)\n- Acompanha 1 vela de LED tipo réchaud por casinha (já inclusas no pedido)\n- Use apenas vela de LED, não use vela com chama\n\nPRAZO\nProdução em até 7 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "designer":  "GulagHias",
     "dims":  null,
     "example":  false,
-    "extras":  0,
+    "extras":  6.5,
     "filPrice":  "",
     "grams":  253,
     "kind":  "exact",
@@ -1287,6 +1303,7 @@ window.CATALOGO = {
     "pieces":  1,
     "source":  "https://makerworld.com/pt/models/1895187",
     "id":  "natal-vila-velas",
+    "gallery":  ["img/natal-vila-velas-g1.jpg", "img/natal-vila-velas-g2.jpg", "img/natal-vila-velas-g3.jpg"],
     "image":  "img/natal-vila-velas.jpg"
 },
 {
@@ -1315,6 +1332,7 @@ window.CATALOGO = {
     "pieces":  1,
     "source":  "https://makerworld.com/pt/models/763697",
     "id":  "natal-presente-pernas",
+    "gallery":  ["img/natal-presente-pernas-g1.jpg", "img/natal-presente-pernas-g2.jpg", "img/natal-presente-pernas-g3.jpg", "img/natal-presente-pernas-g4.jpg", "img/natal-presente-pernas-g5.jpg", "img/natal-presente-pernas-g6.jpg"],
     "image":  "img/natal-presente-pernas.jpg"
 },
 {
@@ -1342,6 +1360,7 @@ window.CATALOGO = {
     "pieces":  1,
     "source":  "https://makerworld.com/pt/models/2419531",
     "id":  "natal-bandeja-japandi",
+    "gallery":  ["img/natal-bandeja-japandi-g1.jpg", "img/natal-bandeja-japandi-g2.jpg", "img/natal-bandeja-japandi-g3.jpg"],
     "image":  "img/natal-bandeja-japandi.jpg"
 },
 {
@@ -1369,6 +1388,7 @@ window.CATALOGO = {
     "pieces":  1,
     "source":  "https://makerworld.com/pt/models/3388512",
     "id":  "natal-rena-elegante",
+    "gallery":  ["img/natal-rena-elegante-g1.jpg", "img/natal-rena-elegante-g2.jpg", "img/natal-rena-elegante-g3.jpg", "img/natal-rena-elegante-g4.jpg", "img/natal-rena-elegante-g5.jpg", "img/natal-rena-elegante-g6.jpg"],
     "image":  "img/natal-rena-elegante.jpg"
 },
 {
@@ -1394,6 +1414,7 @@ window.CATALOGO = {
     "pieces":  1,
     "source":  "",
     "id":  "natal-rena-elegante-pequena",
+    "gallery":  ["img/natal-rena-elegante-pequena-g1.jpg", "img/natal-rena-elegante-pequena-g2.jpg", "img/natal-rena-elegante-pequena-g3.jpg"],
     "image":  "img/natal-rena-elegante-pequena.jpg"
 },
 {
@@ -1421,6 +1442,7 @@ window.CATALOGO = {
     "pieces":  1,
     "source":  "https://makerworld.com/pt/models/3427812",
     "id":  "natal-alce-trico",
+    "gallery":  ["img/natal-alce-trico-g1.jpg", "img/natal-alce-trico-g2.jpg", "img/natal-alce-trico-g3.jpg"],
     "image":  "img/natal-alce-trico.jpg"
 },
 {
@@ -1448,6 +1470,7 @@ window.CATALOGO = {
     "pieces":  1,
     "source":  "https://makerworld.com/pt/models/3454676",
     "id":  "natal-arvore-japandi",
+    "gallery":  ["img/natal-arvore-japandi-g1.jpg", "img/natal-arvore-japandi-g2.jpg", "img/natal-arvore-japandi-g3.jpg"],
     "image":  "img/natal-arvore-japandi.jpg"
 },
 {
@@ -1477,6 +1500,7 @@ window.CATALOGO = {
     "pieces":  1,
     "source":  "https://makerworld.com/pt/models/1993434",
     "id":  "natal-contagem-estrela",
+    "gallery":  ["img/natal-contagem-estrela-g1.jpg", "img/natal-contagem-estrela-g2.jpg", "img/natal-contagem-estrela-g3.jpg", "img/natal-contagem-estrela-g4.jpg", "img/natal-contagem-estrela-g5.jpg", "img/natal-contagem-estrela-g6.jpg"],
     "image":  "img/natal-contagem-estrela.jpg"
 },
 {
@@ -1504,6 +1528,7 @@ window.CATALOGO = {
     "pieces":  1,
     "source":  "https://makerworld.com/pt/models/2091857",
     "id":  "natal-sino",
+    "gallery":  ["img/natal-sino-g1.jpg", "img/natal-sino-g2.jpg", "img/natal-sino-g3.jpg", "img/natal-sino-g4.jpg"],
     "image":  "img/natal-sino.jpg"
 },
 {
@@ -1531,6 +1556,7 @@ window.CATALOGO = {
     "pieces":  1,
     "source":  "https://makerworld.com/pt/models/2134302",
     "id":  "natal-tigela-arvore",
+    "gallery":  ["img/natal-tigela-arvore-g1.jpg", "img/natal-tigela-arvore-g2.jpg", "img/natal-tigela-arvore-g3.jpg"],
     "image":  "img/natal-tigela-arvore.jpg"
 },
 {
@@ -1542,11 +1568,11 @@ window.CATALOGO = {
                    "#E4BD68"
                ],
     "createdAt":  1794860016000,
-    "description":  "Anjo minimalista com corpo em malha vazada e auréola dourada. Com uma vela de LED dentro, projeta sombras lindas na mesa e na parede.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanho: cerca de 18,5 cm de altura\n- Cores reais do filamento, sem pintura\n- Cabe uma vela de LED tipo réchaud (não inclusa)\n- Use apenas vela de LED, não use vela com chama\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
+    "description":  "Anjo minimalista com corpo em malha vazada e auréola dourada. Com uma vela de LED dentro, projeta sombras lindas na mesa e na parede.\n\nDETALHES\n- Material: PLA, plástico biodegradável\n- Tamanho: cerca de 18,5 cm de altura\n- Cores reais do filamento, sem pintura\n- Acompanha vela de LED tipo réchaud (já inclusa no pedido)\n- Use apenas vela de LED, não use vela com chama\n\nPRAZO\nProdução em até 5 dias úteis, mais o prazo de entrega.\n\nIMPORTANTE\nPeça feita sob encomenda em impressão 3D, pode ter pequenas marcas naturais das camadas.",
     "designer":  "Maxx Design",
     "dims":  null,
     "example":  false,
-    "extras":  0,
+    "extras":  1.3,
     "filPrice":  "",
     "grams":  60.9,
     "kind":  "exact",
@@ -1559,6 +1585,7 @@ window.CATALOGO = {
     "pieces":  1,
     "source":  "https://makerworld.com/pt/models/860364",
     "id":  "natal-anjo-vela",
+    "gallery":  ["img/natal-anjo-vela-g1.jpg", "img/natal-anjo-vela-g2.jpg", "img/natal-anjo-vela-g3.jpg", "img/natal-anjo-vela-g4.jpg"],
     "image":  "img/natal-anjo-vela.jpg"
 },
 {
@@ -1587,6 +1614,7 @@ window.CATALOGO = {
     "pieces":  1,
     "source":  "https://makerworld.com/pt/models/1958522",
     "id":  "natal-chapeu-tigela",
+    "gallery":  ["img/natal-chapeu-tigela-g1.jpg", "img/natal-chapeu-tigela-g2.jpg", "img/natal-chapeu-tigela-g3.jpg", "img/natal-chapeu-tigela-g4.jpg"],
     "image":  "img/natal-chapeu-tigela.jpg"
 },
 {
@@ -1616,6 +1644,7 @@ window.CATALOGO = {
     "pieces":  1,
     "source":  "https://makerworld.com/pt/models/3414427",
     "id":  "natal-gnomo-boneco-rena",
+    "gallery":  ["img/natal-gnomo-boneco-rena-g1.jpg", "img/natal-gnomo-boneco-rena-g2.jpg", "img/natal-gnomo-boneco-rena-g3.jpg", "img/natal-gnomo-boneco-rena-g4.jpg", "img/natal-gnomo-boneco-rena-g5.jpg", "img/natal-gnomo-boneco-rena-g6.jpg"],
     "image":  "img/natal-gnomo-boneco-rena.jpg"
 }
 ]
