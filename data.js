@@ -391,7 +391,8 @@ window.CATALOGO = {
                          "pack":  1,
                          "pieces":  1,
                          "id":  "natal-kit-bandeja",
-    "image":  "img/natal-kit-bandeja.webp"
+    "gallery":  ["img/natal-kit-bandeja.webp"],
+    "image":  "img/natal-kit-bandeja-foto.jpg"
                      },
                      {
                          "adTitle":  "Kit Natal Impresso 3d Papai Noel Rena Árvore Placa Feliz Natal",
