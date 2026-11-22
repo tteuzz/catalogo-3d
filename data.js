@@ -392,7 +392,6 @@ window.CATALOGO = {
                          "pack":  1,
                          "pieces":  1,
                          "id":  "natal-kit-bandeja",
-    "gallery":  ["img/natal-kit-bandeja.webp"],
     "image":  "img/natal-kit-bandeja-foto.jpg"
                      },
                      {
