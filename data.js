@@ -571,7 +571,7 @@ window.CATALOGO = {
     "example":  false,
     "extras":  0,
     "filPrice":  "",
-    "grams":  202,
+    "grams":  193.4,
     "kind":  "exact",
     "kitItems":  [
                      "natal-presepio-minimalista",
@@ -582,7 +582,7 @@ window.CATALOGO = {
     "laborMin":  0,
     "margin":  "",
     "material":  "PLA",
-    "minutes":  690,
+    "minutes":  695,
     "name":  "Kit Natal Sagrado na bandeja (Presépio, Jesus tricô e Árvore)",
     "pack":  1,
     "pieces":  1,
